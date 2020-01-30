@@ -1,0 +1,26 @@
+
+main: 
+  - title: npm
+    url: /npm/
+
+npm:
+  - title: ulteam-scripts
+    children:
+      - title: "about"
+        url: /npm/ulteam-scripts/about/
+      - title: "- AzureLogger"
+        url: /npm/ulteam-scripts/azurelogger/
+      - title: "samples"
+        url: /npm/ulteam-scripts/samples/
+      - title: "changeLog"
+        url: /npm/ulteam-scripts/changelog/
+  - title: ulteam-react
+    children:
+      - title: "About"
+        url: /npm/ulteam-react/about/
+      - title: "Structure"
+        url: /npm/ulteam-react/structure/
+      - title: "Samples"
+        url: /npm/ulteam-react/samples/
+      - title: "Changelog"
+        url: /npm/ulteam-react/changelog/
