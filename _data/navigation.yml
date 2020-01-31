@@ -29,7 +29,7 @@ npm:
       - title: "- FilePicker"
         url: /npm/ulteam-react/filepicker/
       - title: "- FormApp"
-        url: /npm/ulteam-react/FormApp/
+        url: /npm/ulteam-react/formapp/
       - title: "- GroupContent"
         url: /npm/ulteam-react/groupcontent/
       - title: "- NumberField"
@@ -37,7 +37,7 @@ npm:
       - title: "- UlPeoplePicker"
         url: /npm/ulteam-react/ulpeoplepicker/
       - title: "- UlTable"
-        url: /npm/ulteam-react/UlTable/
+        url: /npm/ulteam-react/ultable/
       - title: "demo"
         url: /npm/ulteam-react/demo/
       - title: "changelog"
