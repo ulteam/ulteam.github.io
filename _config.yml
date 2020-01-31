@@ -78,7 +78,7 @@ defaults:
       breadcrumbs: true  # disabled by default
 
 minimal_mistakes_skin: "contrast"
-teaser: "/assets/images/ulteam_logo.png"
+logo: "/assets/images/ulteam_logo.png"
 # locale: ru-RU
 # timezone: "Europe/Moscow"
 

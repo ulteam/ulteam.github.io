@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.31.0
+- feat: add errorMessage, required & placeholder props to FilePicker component
+
 #### v2.30.0
 - feat: add accumulateFiles, onChangeFileBase64 props to FilePicker component
 
