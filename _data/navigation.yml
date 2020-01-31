@@ -1,5 +1,7 @@
 
 main: 
+  - title: home
+    url: /
   - title: npm
     url: /npm/
   - title: react-demo

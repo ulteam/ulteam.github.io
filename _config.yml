@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Ulteam
-subtitle: "Libraries"
+# title: Ulteam
+# subtitle: "Libraries"
 email: chernyshev@ulteam.ru
 name: "Ulteam LLC"
 description: >- # this means to ignore newlines until "baseurl:"
@@ -29,7 +29,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ulteam.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ulteam
-masthead_title: "Ulteam"
+# masthead_title: "Ulteam"
 
 # for search settings
 collections:
@@ -68,7 +68,7 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
+      # author_profile: true
       search: true
       search_full_content: true
       # read_time: true
