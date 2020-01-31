@@ -15,7 +15,7 @@ export class TestAzureLogger {
     /** create logger instance */
     const logger: AzureLogger = new AzureLogger(
       /** Application Insights instrumentation key */
-      "c7310ee5-8c8f-4c26-87b5-f166c9c4e8a8",
+      "c7310ee5-8c8f-4c26-87b5-f166c9000000",
       /** user authentification id */
       "user@sample.com",
       /** project name */

@@ -1,5 +1,5 @@
 ---
-title: ulteam-scripts. About
+title: ulteam-scripts AzureLogger
 permalink: /npm/ulteam-scripts/azurelogger/
 ---
 

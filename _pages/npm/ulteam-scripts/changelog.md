@@ -1,7 +1,9 @@
 ---
-title: ulteam-scripts changeLog
+title: ulteam-scripts changelog
 permalink: /npm/ulteam-scripts/changelog/
 ---
+
+### changelog
 
 #### v1.3.1
 - fix: error with blocking others track types if add url filters for trackPageView

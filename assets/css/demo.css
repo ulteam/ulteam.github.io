@@ -1,0 +1,8 @@
+div.archive {
+  float: none;
+  width: auto;
+  padding-right: 0;
+}
+.sidebar {
+  display: none;
+}

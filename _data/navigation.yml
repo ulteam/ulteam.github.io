@@ -2,6 +2,8 @@
 main: 
   - title: npm
     url: /npm/
+  - title: react-demo
+    url: /npm/ulteam-react/demo/
 
 npm:
   - title: ulteam-scripts
@@ -12,15 +14,29 @@ npm:
         url: /npm/ulteam-scripts/azurelogger/
       - title: "samples"
         url: /npm/ulteam-scripts/samples/
-      - title: "changeLog"
+      - title: "changelog"
         url: /npm/ulteam-scripts/changelog/
   - title: ulteam-react
     children:
-      - title: "About"
+      - title: "about"
         url: /npm/ulteam-react/about/
-      - title: "Structure"
-        url: /npm/ulteam-react/structure/
-      - title: "Samples"
-        url: /npm/ulteam-react/samples/
-      - title: "Changelog"
+      - title: "- AutoComplete"
+        url: /npm/ulteam-react/autocomplete/
+      - title: "- ErrorHandler"
+        url: /npm/ulteam-react/errorhandler/
+      - title: "- FilePicker"
+        url: /npm/ulteam-react/filepicker/
+      - title: "- FormApp"
+        url: /npm/ulteam-react/FormApp/
+      - title: "- GroupContent"
+        url: /npm/ulteam-react/groupcontent/
+      - title: "- NumberField"
+        url: /npm/ulteam-react/numberfield/
+      - title: "- UlPeoplePicker"
+        url: /npm/ulteam-react/ulpeoplepicker/
+      - title: "- UlTable"
+        url: /npm/ulteam-react/UlTable/
+      - title: "demo"
+        url: /npm/ulteam-react/demo/
+      - title: "changelog"
         url: /npm/ulteam-react/changelog/

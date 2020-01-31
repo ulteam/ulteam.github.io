@@ -1,5 +1,5 @@
 ---
-title: ulteam-scripts about
+title: ulteam-scripts
 permalink: /npm/ulteam-scripts/about/
 ---
 

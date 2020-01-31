@@ -7,6 +7,22 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+$mainColor: #000000;
+$secondColor: #666666;
+$accentColor: #ff0000;
+$whiteColor: #ffffff;
+
+@mixin linkMixin($color, $hoverColor) {
+  text-decoration: none;
+  color: $color;
+  &:visited {
+    color: $color;
+  }
+  &:hover {
+    color: $hoverColor;
+    text-decoration: none!important;
+  }
+}
 
 article.page .pagination {
   display: none;
@@ -14,4 +30,38 @@ article.page .pagination {
 
 h2#constructors {
   display: none;
+}
+
+section.page__content {
+  .sidebar__right {
+    .nav__title {
+      background-color: $secondColor;
+    }
+    a {
+      @include linkMixin($mainColor, $secondColor);
+    }
+  } 
+  a {
+    
+    @include linkMixin($accentColor, $secondColor);
+  }
+}
+
+table {
+  thead {
+    background-color: $whiteColor;
+    th {
+      font-weight: normal;
+      opacity: 0.6;
+    }
+  }
+}
+
+.search-content {
+  .archive__item-teaser {
+    display: none;
+  }
+  a {
+    @include linkMixin($secondColor, $accentColor);
+  }
 }
