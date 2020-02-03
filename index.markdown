@@ -17,7 +17,7 @@ There is documentation site for our [npm](https://www.npmjs.com/~ulteam) package
 - generator-ulteam-sp
 - [ulteam-scripts](/npm/ulteam-scripts/about/)
 - [ulteam-react](/npm/ulteam-react/about/)
-- ulteam-grid
+- [ulteam-grid](/npm/ulteam-grid/about/)
 
 ### NuGet packages
 

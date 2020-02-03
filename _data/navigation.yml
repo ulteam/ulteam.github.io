@@ -42,3 +42,13 @@ npm:
         url: /npm/ulteam-react/demo/
       - title: "changelog"
         url: /npm/ulteam-react/changelog/
+  - title: ulteam-grid
+    children:
+      - title: "about"
+        url: /npm/ulteam-grid/about/
+      - title: "- UlteamGrid"
+        url: /npm/ulteam-grid/ulteamgrid/
+      - title: "- GridWebPart"
+        url: /npm/ulteam-grid/gridwebpart/
+      - title: "changelog"
+        url: /npm/ulteam-grid/changelog/
