@@ -50,6 +50,8 @@ npm:
         url: /npm/ulteam-grid/ulteamgrid/
       - title: "- GridWebPart"
         url: /npm/ulteam-grid/gridwebpart/
+      - title: "samples"
+        url: /npm/ulteam-grid/samples/
       - title: "changelog"
         url: /npm/ulteam-grid/changelog/
   - title: generator-ulteam-sp
