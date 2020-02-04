@@ -14,6 +14,10 @@ npm:
         url: /npm/ulteam-scripts/about/
       - title: "- AzureLogger"
         url: /npm/ulteam-scripts/azurelogger/
+      - title: "- FetchHelper"
+        url: /npm/ulteam-scripts/fetchhelper/
+      - title: "- WebResponse"
+        url: /npm/ulteam-scripts/webresponse/
       - title: "samples"
         url: /npm/ulteam-scripts/samples/
       - title: "changelog"

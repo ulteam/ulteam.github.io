@@ -5,6 +5,9 @@ permalink: /npm/ulteam-scripts/changelog/
 
 ### changelog
 
+#### v1.4.0
+- feat: add FetchHelper class
+
 #### v1.3.1
 - fix: error with blocking others track types if add url filters for trackPageView
 

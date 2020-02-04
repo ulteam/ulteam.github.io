@@ -19,3 +19,4 @@ npm install --save ulteam-scripts
 | Name | Description |
 |---|---|
 |[AzureLogger](/npm/ulteam-scripts/azurelogger/)| Work with Azure Application Insights |
+|[FetchHelper](/npm/ulteam-scripts/fetchhelper/)| Send HTTP requests by fetch |
