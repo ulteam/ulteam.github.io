@@ -14,7 +14,7 @@ There is documentation site for our [npm](https://www.npmjs.com/~ulteam) package
 
 ### npm packages
 
-- generator-ulteam-sp
+- [generator-ulteam-sp](/npm/generator-ulteam-sp/about/)
 - [ulteam-scripts](/npm/ulteam-scripts/about/)
 - [ulteam-react](/npm/ulteam-react/about/)
 - [ulteam-grid](/npm/ulteam-grid/about/)

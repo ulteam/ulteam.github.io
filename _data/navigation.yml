@@ -52,3 +52,9 @@ npm:
         url: /npm/ulteam-grid/gridwebpart/
       - title: "changelog"
         url: /npm/ulteam-grid/changelog/
+  - title: generator-ulteam-sp
+    children:
+      - title: "about"
+        url: /npm/generator-ulteam-sp/about/
+      - title: "changelog"
+        url: /npm/generator-ulteam-sp/changelog/
