@@ -5,6 +5,9 @@ permalink: /npm/ulteam-scripts/changelog/
 
 ### changelog
 
+#### v1.5.0
+- feat: add Delay class
+
 #### v1.4.0
 - feat: add FetchHelper class
 

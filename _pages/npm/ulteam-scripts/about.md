@@ -19,4 +19,5 @@ npm install --save ulteam-scripts
 | Name | Description |
 |---|---|
 |[AzureLogger](/npm/ulteam-scripts/azurelogger/)| Work with Azure Application Insights |
+|[Delay](/npm/ulteam-scripts/delay/)| Create your async delay |
 |[FetchHelper](/npm/ulteam-scripts/fetchhelper/)| Send HTTP requests by fetch |

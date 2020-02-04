@@ -14,6 +14,8 @@ npm:
         url: /npm/ulteam-scripts/about/
       - title: "- AzureLogger"
         url: /npm/ulteam-scripts/azurelogger/
+      - title: "- Delay"
+        url: /npm/ulteam-scripts/delay/
       - title: "- FetchHelper"
         url: /npm/ulteam-scripts/fetchhelper/
       - title: "- WebResponse"
