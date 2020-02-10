@@ -13,12 +13,14 @@ Tile with info about News/blog.
 import * as React from 'react';
 import { BlogTile } from '../../../../common/components/BlogTile/BlogTile';
 import { IBlogTileData } from '../../../../common/components/BlogTile/BlogTile.types';
-import { Toggle } from 'office-ui-fabric-react/lib/components/Toggle/Toggle';
+import { TestBlogTileSettings, ITestBlogTileSettingsProps } from './TestBlogTileSettings';
 
 interface ITestState {
   hideFooter?: boolean;
 
   isShimmer?: boolean;
+
+  maxWidth: number;
 
   noFixedHeight?: boolean;
 
@@ -29,6 +31,8 @@ interface ITestState {
   slideInBottom?: boolean;
 
   slideInBottomNoTitle?: boolean;
+
+  titleMaxSize?: number;
 }
 
 /**
@@ -40,7 +44,9 @@ export class TestBlogTile extends React.Component<{}, ITestState> {
 
     this.state = {
       hideFooter: false,
-      scaleImageOnHover: undefined
+      maxWidth: 500,
+      scaleImageOnHover: undefined,
+      titleMaxSize: 200
     };
   }
 
@@ -49,7 +55,7 @@ export class TestBlogTile extends React.Component<{}, ITestState> {
       title: 'Awesome blog tile title',
       date: '14:57 | 20.06.2020',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus enim a consectetur mollis. In imperdiet venenatis urna, ut tempor augue sagittis quis. Nullam faucibus, sapien eget rutrum vehicula, ligula ex malesuada massa, eu congue turpis magna scelerisque metus. Sed gravida bibendum varius. Vivamus sed lorem dictum dolor volutpat maximus lacinia et enim. Praesent finibus, felis in consectetur sagittis, est est auctor ipsum, eu mollis orci dolor sit amet ligula. Pellentesque aliquet massa nulla, et pulvinar massa cursus ac. Nulla in mollis libero. Etiam at libero eu leo suscipit lacinia a at ligula. Quisque vel urna vehicula, efficitur sem non, convallis diam. Donec dictum vitae tortor non ullamcorper.',
-      imageUrl: this.state.noImage !== true ? '/debug/mockData/photo-fullHD.jpg' : undefined,
+      imageUrl: this.state.noImage !== true ? 'https://i.picsum.photos/id/866/1920/1080.jpg' : undefined,
       numberOfComments: 5,
       numberOfLikes: 6
     }
@@ -57,86 +63,33 @@ export class TestBlogTile extends React.Component<{}, ITestState> {
     return (
       <div>
           <h3>BlogTile component</h3>
-          <Toggle label="Add scale animation to tile image" onText="On" offText="Off" 
-            onChange={this.handleScaleImage}
-            defaultChecked={this.state.scaleImageOnHover}
-          />
-          <Toggle label="Add slide-in-bottom animation" onText="On" offText="Off" 
-            onChange={this.handleSlideInBottom}
-            defaultChecked={this.state.slideInBottom}
-          />
-          <Toggle label="No tile image" onText="On" offText="Off" 
-            onChange={this.handleNoImage}
-            defaultChecked={this.state.noImage}
-          />
-          <Toggle label="Hide blog footer" onText="On" offText="Off" 
-            onChange={this.handleHideFooter}
-            defaultChecked={this.state.hideFooter}
-          />
-          <Toggle label="No fixed height (enable only if blog footer is hide)" onText="On" offText="Off" 
-            onChange={this.handleNoFixedHeight}
-            defaultChecked={this.state.noFixedHeight}
-          />
-          <Toggle label="Hide title (enable if slideInBottom = true)" onText="On" offText="Off" 
-            onChange={this.handleSlideInBottomNoTitle}
-            defaultChecked={this.state.slideInBottomNoTitle}
-          />
-          <Toggle label="Enable shimmer" onText="On" offText="Off" 
-            onChange={this.handleIsShimmer}
-            defaultChecked={this.state.isShimmer}
+          <TestBlogTileSettings
+            {...this.state}
+            label="Settings"
+            onChange={this.handleSettings}
           />
           <div style={{height: 20}}></div>
           <BlogTile 
             data={blogTileData}
             descriptionMaxSize={200}
             tileHeight={250}
-            hideFooter={this.state.hideFooter}
-            isShimmer={this.state.isShimmer}
-            maxWidth={500}
-            noFixedDataHeight={this.state.noFixedHeight}
             onClick={this.handleOnClick}
-            scaleImageOnHover={this.state.scaleImageOnHover}
-            slideInBottom={this.state.slideInBottom}
-            slideInBottomNoTitle={this.state.slideInBottomNoTitle}
             titleForComments="Number of comments"
             titleForDate="Blog created date"
             titleForLikes="Number of likes"
             titleForLink="Go to the blog..."
+            {...this.state}
           />
       </div>
     );
   }
 
-  private handleIsShimmer = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
-    this.setState({isShimmer: checked});
+  private handleSettings = (props: ITestBlogTileSettingsProps) => {
+    this.setState({...props});
   }
 
   private handleOnClick = (data: IBlogTileData) => {
     console.log('click on blog', data);
-  }
-
-  private handleHideFooter = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
-    this.setState({hideFooter: checked});
-  }
-
-  private handleNoFixedHeight = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
-    this.setState({noFixedHeight: checked});
-  }
-
-  private handleNoImage = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
-    this.setState({noImage: checked});
-  }
-
-  private handleScaleImage = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
-    this.setState({scaleImageOnHover: checked});
-  }
-
-  private handleSlideInBottom = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
-    this.setState({slideInBottom: checked});
-  }
-
-  private handleSlideInBottomNoTitle = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
-    this.setState({slideInBottomNoTitle: checked});
   }
 }
 ```

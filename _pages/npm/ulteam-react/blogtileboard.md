@@ -11,29 +11,32 @@ Blogs board based on BlogTile component.
 
 ```js
 import * as React from 'react';
-import { IBlogTileData, IBlogTileBaseProps } from '../../../../common/components/BlogTile/BlogTile.types';
-import { Toggle } from 'office-ui-fabric-react/lib/components/Toggle/Toggle';
+import { IBlogTileData } from '../../../../common/components/BlogTile/BlogTile.types';
 import { BlogTileBoard } from '../../../../common/components/BlogTileBoard/BlogTileBoard';
 import { Slider } from 'office-ui-fabric-react/lib/components/Slider/Slider';
+import { TestBlogTileSettings, ITestBlogTileSettingsProps } from '../TestBlogTile/TestBlogTileSettings';
 
 interface ITestState {
+  mainTileProps: ITestBlogTileSettingsProps;
+  smallTileProps: ITestBlogTileSettingsProps;
+
   boardHeight: number;
 
-  hideFooter?: boolean;
+  // hideFooter?: boolean;
 
-  isShimmer?: boolean;
+  // isShimmer?: boolean;
 
-  noFixedHeight?: boolean;
+  // noFixedHeight?: boolean;
 
-  noImage?: boolean;
+  // noImage?: boolean;
 
   numberOfItems: number;
 
-  scaleImageOnHover?: boolean;
+  // scaleImageOnHover?: boolean;
 
-  slideInBottom?: boolean;
+  // slideInBottom?: boolean;
 
-  slideInBottomNoTitle?: boolean;
+  // slideInBottomNoTitle?: boolean;
 }
 
 /**
@@ -43,11 +46,29 @@ export class TestBlogTileBoard extends React.Component<{}, ITestState> {
   constructor(props: {}) {
     super(props);
 
+    const mainTileProps: ITestBlogTileSettingsProps = {
+      maxWidth: 500,
+      titleMaxSize: 200,
+      descriptionMaxSize: 200,
+      label: "Main tile props",
+      onChange: this.handleMainTileProps
+    };
+
+    const smallTileProps: ITestBlogTileSettingsProps = {
+      maxWidth: 250,
+      titleMaxSize: 200,
+      descriptionMaxSize: 200,
+      label: "Small tile props",
+      onChange: this.handleSmallTileProps
+    }
+
     this.state = {
       boardHeight: 250,
-      hideFooter: false,
+      // hideFooter: false,
+      mainTileProps,
       numberOfItems: 3,
-      scaleImageOnHover: undefined
+      smallTileProps
+      // scaleImageOnHover: undefined
     };
   }
 
@@ -56,7 +77,7 @@ export class TestBlogTileBoard extends React.Component<{}, ITestState> {
       title: 'Awesome blog tile title',
       date: '14:57 | 20.06.2020',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus enim a consectetur mollis. In imperdiet venenatis urna, ut tempor augue sagittis quis. Nullam faucibus, sapien eget rutrum vehicula, ligula ex malesuada massa, eu congue turpis magna scelerisque metus. Sed gravida bibendum varius. Vivamus sed lorem dictum dolor volutpat maximus lacinia et enim. Praesent finibus, felis in consectetur sagittis, est est auctor ipsum, eu mollis orci dolor sit amet ligula. Pellentesque aliquet massa nulla, et pulvinar massa cursus ac. Nulla in mollis libero. Etiam at libero eu leo suscipit lacinia a at ligula. Quisque vel urna vehicula, efficitur sem non, convallis diam. Donec dictum vitae tortor non ullamcorper.',
-      imageUrl: this.state.noImage !== true ? '/debug/mockData/photo-fullHD.jpg' : undefined,
+      imageUrl: this.state.mainTileProps.noImage !== true ? 'https://i.picsum.photos/id/866/1920/1080.jpg' : undefined,
       numberOfComments: 5,
       numberOfLikes: 6
     }
@@ -66,48 +87,9 @@ export class TestBlogTileBoard extends React.Component<{}, ITestState> {
       items.push({...blogTileData});
     }
 
-    const mainTileProps: IBlogTileBaseProps = {
-      descriptionMaxSize: 200,
-      hideFooter: this.state.hideFooter,
-      maxWidth: 500,
-      noFixedDataHeight: this.state.noFixedHeight,
-      scaleImageOnHover: this.state.scaleImageOnHover,
-      slideInBottom: this.state.slideInBottom,
-      slideInBottomNoTitle: this.state.slideInBottomNoTitle,
-      titleMaxSize: 200
-    };
-
     return (
       <div>
           <h3>BlogTile component</h3>
-          <Toggle label="Add scale animation to tile image" onText="On" offText="Off" 
-            onChange={this.handleScaleImage}
-            defaultChecked={this.state.scaleImageOnHover}
-          />
-          <Toggle label="Add slide-in-bottom animation" onText="On" offText="Off" 
-            onChange={this.handleSlideInBottom}
-            defaultChecked={this.state.slideInBottom}
-          />
-          <Toggle label="No tile image" onText="On" offText="Off" 
-            onChange={this.handleNoImage}
-            defaultChecked={this.state.noImage}
-          />
-          <Toggle label="Hide blog footer" onText="On" offText="Off" 
-            onChange={this.handleHideFooter}
-            defaultChecked={this.state.hideFooter}
-          />
-          <Toggle label="No fixed height (enable only if blog footer is hide)" onText="On" offText="Off" 
-            onChange={this.handleNoFixedHeight}
-            defaultChecked={this.state.noFixedHeight}
-          />
-          <Toggle label="Hide title (enable if slideInBottom = true)" onText="On" offText="Off" 
-            onChange={this.handleSlideInBottomNoTitle}
-            defaultChecked={this.state.slideInBottomNoTitle}
-          />
-          <Toggle label="Enable shimmer" onText="On" offText="Off" 
-            onChange={this.handleIsShimmer}
-            defaultChecked={this.state.isShimmer}
-          />
           <Slider
             label="Board height"
             min={100}
@@ -126,16 +108,21 @@ export class TestBlogTileBoard extends React.Component<{}, ITestState> {
             showValue={true}
             onChange={(value: number) => {this.setState({numberOfItems: value})}}
           />
+          <div style={{ display: 'flex' }}>
+            <TestBlogTileSettings
+              {...this.state.mainTileProps}
+            />
+            <TestBlogTileSettings
+              {...this.state.smallTileProps}
+            />
+          </div>
           <div style={{height: 20}}></div>
           <BlogTileBoard 
             items={items}
-            mainTile={mainTileProps}
-            smallTile={{
-              ...mainTileProps,
-              maxWidth: mainTileProps.maxWidth as number / 2
-            }}
+            mainTile={this.state.mainTileProps}
+            smallTile={this.state.smallTileProps}
             boardHeight={this.state.boardHeight}
-            isShimmer={this.state.isShimmer}
+            isShimmer={this.state.mainTileProps.isShimmer}
             onClick={this.handleOnClick}
             titleForComments="Number of comments"
             titleForDate="Blog created date"
@@ -148,36 +135,24 @@ export class TestBlogTileBoard extends React.Component<{}, ITestState> {
     );
   }
 
-  private handleIsShimmer = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
-    this.setState({isShimmer: checked});
+  private handleMainTileProps = (props: ITestBlogTileSettingsProps) => {
+    this.setState({
+      mainTileProps: {
+        ...props
+      }
+    });
+  }
+
+  private handleSmallTileProps = (props: ITestBlogTileSettingsProps) => {
+    this.setState({
+      smallTileProps: {
+        ...props
+      }
+    });
   }
 
   private handleOnClick = (data: IBlogTileData) => {
     console.log('click on blog', data);
-  }
-
-  private handleHideFooter = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
-    this.setState({hideFooter: checked});
-  }
-
-  private handleNoFixedHeight = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
-    this.setState({noFixedHeight: checked});
-  }
-
-  private handleNoImage = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
-    this.setState({noImage: checked});
-  }
-
-  private handleScaleImage = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
-    this.setState({scaleImageOnHover: checked});
-  }
-
-  private handleSlideInBottom = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
-    this.setState({slideInBottom: checked});
-  }
-
-  private handleSlideInBottomNoTitle = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
-    this.setState({slideInBottomNoTitle: checked});
   }
 }
 ```

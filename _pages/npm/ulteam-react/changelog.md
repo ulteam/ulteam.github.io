@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.32.1
+- fix: correct style if BlogTile.noFixedHeight = true
+
 #### v2.32.0
 - feat: add BlogTile & BlogTileBoard components
 
