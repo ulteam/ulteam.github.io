@@ -4,8 +4,12 @@ permalink: /npm/ulteam-react/numberfield/
 ---
 
 ## NumberField component
+
 Component is based on TextField from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.
 Properties extends TextField component props.
+
+
+
 ### INumberFieldProps
 
 | Property Name | Required | Type | Comments |

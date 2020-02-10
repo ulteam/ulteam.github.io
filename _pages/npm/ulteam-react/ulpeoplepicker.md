@@ -4,8 +4,12 @@ permalink: /npm/ulteam-react/ulpeoplepicker/
 ---
 
 ## UlPeoplePicker component
+
 People picker based on NormalPeoplePicker component from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.
 It's just more convenient NormalPeoplePicker component.
+
+
+
 ### IUlPeoplePickerProps
 
 | Property Name | Required | Type | Comments |

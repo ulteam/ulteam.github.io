@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.32.0
+- feat: add BlogTile & BlogTileBoard components
+
 #### v2.31.0
 - feat: add errorMessage, required & placeholder props to FilePicker component
 

@@ -30,6 +30,10 @@ npm:
         url: /npm/ulteam-react/about/
       - title: "- AutoComplete"
         url: /npm/ulteam-react/autocomplete/
+      - title: "- BlogTile"
+        url: /npm/ulteam-react/blogtile/
+      - title: "- BlogTileBoard"
+        url: /npm/ulteam-react/blogtileboard/
       - title: "- ErrorHandler"
         url: /npm/ulteam-react/errorhandler/
       - title: "- FilePicker"

@@ -17,15 +17,25 @@ Components based on [Office UI Fabric React](https://www.npmjs.com/package/offic
 npm install --save ulteam-react
 ```
 
+#### Update to latest
+
+```bash
+npm install --save ulteam-react@latest
+```
+
+
+
 #### Components
 
 | Name | Description |
 |-|-|
-| [AutoComplete](/npm/ulteam-react/autocomplete/) | Text field with search and autocomplete. Based on Office UI Picker control. |
+| [BlogTile](/npm/ulteam-react/blogtile/) | Tile with info about News/blog. |
+| [BlogTileBoard](/npm/ulteam-react/blogtileboard/) | Blogs board based on BlogTile component. |
 | [ErrorHandler](/npm/ulteam-react/errorhandler/) | Error handling component. Wrap your JSX as try catch. Exception view based on MessageBar from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package. |
-| [FilePicker](/npm/ulteam-react/filepicker/) | File picker based on HTML input with type="file". |
-| [FormApp](/npm/ulteam-react/formapp/) | Generate your form with controls from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package. Configure form fields and component aggregates all field values in one plain object. |
+| [FilePicker](/npm/ulteam-react/filepicker/) | File picker based on HTML input with type="file".<br>Main features:<br>- You can pick one or several files.<br>- You can replace files or accumulate |
 | [GroupContent](/npm/ulteam-react/groupcontent/) | Component for expand and collapse content. Just wrap your JSX elements. |
-| [NumberField](/npm/ulteam-react/numberfield/) | Control for number values. Component is based on TextField from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package. |
-| [UlPeoplePicker](/npm/ulteam-react/ulpeoplepicker/) | People picker based on NormalPeoplePicker component from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package. It's just more convenient NormalPeoplePicker component. |
-| [UlTable](/npm/ulteam-react/ultable/) | Generate your table with controls from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package. Configure table fields and component aggregates all rows values in one plain object. Table has edit mode, shimmer mode. You can fix header or/and fix left columns. |
+| [NumberField](/npm/ulteam-react/numberfield/) | Component is based on TextField from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.<br>Properties extends TextField component props. |
+| [AutoComplete](/npm/ulteam-react/autocomplete/) | Text field with search and autocomplete. Based on Office UI Picker control. |
+| [UlPeoplePicker](/npm/ulteam-react/ulpeoplepicker/) | People picker based on NormalPeoplePicker component from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.<br>It's just more convenient NormalPeoplePicker component. |
+| [FormApp](/npm/ulteam-react/formapp/) | Generate your form with controls from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.<br>Configure form fields and component aggregates all field values in one plain object. |
+| [UlTable](/npm/ulteam-react/ultable/) | Generate your table with controls from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.<br>Configure table fields and component aggregates all rows values in one plain object.<br>Table has edit mode, shimmer mode. You can fix header or/and fix left columns. |
