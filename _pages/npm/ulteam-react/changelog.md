@@ -5,6 +5,15 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.32.4
+- fix: raise IBlogTileBoardProps.style priority in BlogTileBoard component
+
+#### v2.32.3
+- fix: not show likes in BlogTile component if numberOfLikes = 0
+
+#### v2.32.2
+- fix: error style in BlogTile component
+
 #### v2.32.1
 - fix: correct style if BlogTile.noFixedHeight = true
 
