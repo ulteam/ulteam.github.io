@@ -9,6 +9,7 @@ Text field with search and autocomplete. Based on Office UI Picker control.
 
 
 
+
 ### IAutoCompleteProps
 
 | Property Name | Required | Type | Comments |

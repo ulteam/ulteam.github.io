@@ -7,6 +7,9 @@ permalink: /npm/ulteam-react/errorhandler/
 
 Error handling component. Wrap your JSX as try catch. Exception view based on MessageBar from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.
 
+### Demo
+Try component on the [demo](/npm/ulteam-react/demo/?r=errorhandler)
+
 ### Sample
 
 ```js

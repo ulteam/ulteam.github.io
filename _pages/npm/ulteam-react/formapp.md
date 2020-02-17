@@ -8,6 +8,9 @@ permalink: /npm/ulteam-react/formapp/
 Generate your form with controls from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.
 Configure form fields and component aggregates all field values in one plain object.
 
+### Demo
+Try component on the [demo](/npm/ulteam-react/demo/?r=basicform)
+
 ### Sample
 
 ```js

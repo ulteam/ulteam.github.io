@@ -7,6 +7,9 @@ permalink: /npm/ulteam-react/blogtile/
 
 Tile with info about News/blog.
 
+### Demo
+Try component on the [demo](/npm/ulteam-react/demo/?r=blogtile)
+
 ### Sample
 
 ```js

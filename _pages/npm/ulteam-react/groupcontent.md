@@ -7,6 +7,9 @@ permalink: /npm/ulteam-react/groupcontent/
 
 Component for expand and collapse content. Just wrap your JSX elements.
 
+### Demo
+Try component on the [demo](/npm/ulteam-react/demo/?r=groupcontent)
+
 ### Sample
 
 ```js

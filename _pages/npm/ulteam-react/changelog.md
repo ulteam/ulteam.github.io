@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.33.0
+- feat: add ImageTile component
+
 #### v2.32.4
 - fix: raise IBlogTileBoardProps.style priority in BlogTileBoard component
 

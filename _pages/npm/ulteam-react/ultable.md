@@ -9,6 +9,9 @@ Generate your table with controls from [office-ui-fabric-react](https://www.npmj
 Configure table fields and component aggregates all rows values in one plain object.
 Table has edit mode, shimmer mode. You can fix header or/and fix left columns.
 
+### Demo
+Try component on the [demo](/npm/ulteam-react/demo/?r=basictable)
+
 ### Sample
 
 ```js

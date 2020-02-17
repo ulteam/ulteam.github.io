@@ -10,6 +10,7 @@ It's just more convenient NormalPeoplePicker component.
 
 
 
+
 ### IUlPeoplePickerProps
 
 | Property Name | Required | Type | Comments |

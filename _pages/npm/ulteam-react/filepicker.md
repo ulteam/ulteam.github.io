@@ -10,6 +10,9 @@ Main features:
 - You can pick one or several files.
 - You can replace files or accumulate
 
+### Demo
+Try component on the [demo](/npm/ulteam-react/demo/?r=filepicker)
+
 ### Sample
 
 ```js

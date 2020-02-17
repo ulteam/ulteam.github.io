@@ -7,6 +7,9 @@ permalink: /npm/ulteam-react/blogtileboard/
 
 Blogs board based on BlogTile component.
 
+### Demo
+Try component on the [demo](/npm/ulteam-react/demo/?r=blogtileboard)
+
 ### Sample
 
 ```js
