@@ -42,6 +42,8 @@ npm:
         url: /npm/ulteam-react/formapp/
       - title: "- GroupContent"
         url: /npm/ulteam-react/groupcontent/
+      - title: "- ImageTile"
+        url: /npm/ulteam-react/imagetile/
       - title: "- NumberField"
         url: /npm/ulteam-react/numberfield/
       - title: "- UlPeoplePicker"
