@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.34.0
+- feat: add ImageTile props: maxHeight, maxWidth, id, onClick, tileTitle
+
 #### v2.33.0
 - feat: add ImageTile component
 

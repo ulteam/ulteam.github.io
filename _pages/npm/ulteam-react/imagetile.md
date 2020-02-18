@@ -59,11 +59,16 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
           onChange={this.handleHeight}
         />
         <ImageTile
-          height={this.state.height}
-          width={this.state.width}
+          maxHeight={this.state.height}
+          maxWidth={this.state.width}
+          minHeight={this.state.height}
+          minWidth={this.state.width}
+          id="my image tile"
+          onClick={this.handleOnClick}
           photoPlaceholder={placeholder}
-          text={'Main text'}
-          secondaryText={'Secondary text'}
+          tileTitle="My title"
+          text="Main text"
+          secondaryText="Secondary text"
         >
           My additional html
         </ImageTile>
@@ -73,6 +78,10 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
 
   public handleHeight = (value: number) => {
     this.setState({ height: value });
+  }
+
+  public handleOnClick = (id?: number | string) => {
+    console.log(`click on ${id}`);
   }
 
   public handleWidth = (value: number) => {
@@ -87,10 +96,15 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
 | Property Name | Required | Type | Comments |
 |-|-|-|-|
  | className | `Optional` |  *string* |     Add custom class to component       |  
- | height |  |  *number \| string* |     Image height. Standard CSS height property       |  
+ | id | `Optional` |  *number \| string* |     Tile id. Use prop for onClick callback       |  
+ | maxHeight | `Optional` |  *number \| string* |     Image max height. Standard CSS height property       |  
+ | maxWidth | `Optional` |  *number \| string* |     Image max width. Standard CSS width property       |  
+ | minHeight |  |  *number \| string* |     Image min height. Standard CSS height property       |  
+ | minWidth |  |  *number \| string* |     Image min width. Standard CSS width property       |  
+ | onClick | `Optional` |  *function* |     Tile onClick event       |  
  | photo | `Optional` |  *string* |     Image url       |  
  | photoPlaceholder |  |  *string* |     Define placeholder url, if Image is not exist       |  
  | secondaryText | `Optional` |  *string* |     Secondary text to display, usually the user first name       |  
  | style | `Optional` |  *CSSProperties* |     Add custom standard styles to component       |  
  | text | `Optional` |  *string* |     Main text to display, usually the user last name       |  
- | width |  |  *number \| string* |     Image width. Standard CSS width property       |
+ | tileTitle | `Optional` |  *string* |     Define standard title attribute for root div       |
