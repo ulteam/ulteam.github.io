@@ -5,6 +5,12 @@ permalink: /npm/generator-ulteam-sp/changelog/
 
 ### Changelog
 
+#### v1.5.1
+- fix: delete awesome-typescript-loader from gulpfile.js
+
+#### v1.5.0
+- feat: migrate from awesome-typescript-loader to ts-loader
+
 #### v1.4.0
 - feat: update ulteam-grid version for Grid web part template
 
