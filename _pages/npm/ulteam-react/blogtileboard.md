@@ -12,7 +12,7 @@ Try component on the [demo](/npm/ulteam-react/demo/?r=blogtileboard)
 
 ### Sample
 
-```js
+```tsx
 import * as React from 'react';
 import { IBlogTileData } from '../../../../common/components/BlogTile/BlogTile.types';
 import { BlogTileBoard } from '../../../../common/components/BlogTileBoard/BlogTileBoard';
@@ -111,7 +111,7 @@ export class TestBlogTileBoard extends React.Component<{}, ITestState> {
             showValue={true}
             onChange={(value: number) => {this.setState({numberOfItems: value})}}
           />
-          <div style={{ display: 'flex' }}>
+          <div className="ul-flex">
             <TestBlogTileSettings
               {...this.state.mainTileProps}
             />
@@ -119,7 +119,7 @@ export class TestBlogTileBoard extends React.Component<{}, ITestState> {
               {...this.state.smallTileProps}
             />
           </div>
-          <div style={{height: 20}}></div>
+          <div className="emptyHeight"></div>
           <BlogTileBoard 
             items={items}
             mainTile={this.state.mainTileProps}
@@ -133,7 +133,7 @@ export class TestBlogTileBoard extends React.Component<{}, ITestState> {
             titleForLink="Go to the blog..."
             tilePadding={4}
           />
-          <div style={{backgroundColor: 'grey', color: 'white', textAlign: 'center'}}>Test padding</div>
+          <div className="testPadding">Test padding</div>
       </div>
     );
   }

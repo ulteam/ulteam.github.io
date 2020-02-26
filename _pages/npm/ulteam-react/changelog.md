@@ -5,6 +5,12 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.35.1
+- docs: add pages for PaginationDots & Slider components
+
+#### v2.35.0
+- feat: add PaginationDots & Slider components
+
 #### v2.34.1
 - fix: add background-color to ImageTile if image not found. 
 - fix: set ImageTile photoPlacholder prop as optional

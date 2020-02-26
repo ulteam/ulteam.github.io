@@ -12,7 +12,7 @@ Try component on the [demo](/npm/ulteam-react/demo/?r=blogtile)
 
 ### Sample
 
-```js
+```tsx
 import * as React from 'react';
 import { BlogTile } from '../../../../common/components/BlogTile/BlogTile';
 import { IBlogTileData } from '../../../../common/components/BlogTile/BlogTile.types';
@@ -71,7 +71,7 @@ export class TestBlogTile extends React.Component<{}, ITestState> {
             label="Settings"
             onChange={this.handleSettings}
           />
-          <div style={{height: 20}}></div>
+          <div className="emptyHeight"></div>
           <BlogTile 
             data={blogTileData}
             descriptionMaxSize={200}

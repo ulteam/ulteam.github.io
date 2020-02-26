@@ -13,7 +13,7 @@ Try component on the [demo](/npm/ulteam-react/demo/?r=basicform)
 
 ### Sample
 
-```js
+```tsx
 import { PrimaryButton } from 'office-ui-fabric-react/lib/components/Button/PrimaryButton/PrimaryButton';
 import { IPersonaProps } from 'office-ui-fabric-react/lib/components/Persona/Persona.types';
 import { ITag } from 'office-ui-fabric-react/lib/components/pickers/TagPicker/TagPicker.types';

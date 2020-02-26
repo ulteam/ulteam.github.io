@@ -5,14 +5,14 @@ permalink: /npm/ulteam-react/imagetile/
 
 ## ImageTile component
 
-Tile with image and data
+Tile with image and data.
 
 ### Demo
 Try component on the [demo](/npm/ulteam-react/demo/?r=imagetile)
 
 ### Sample
 
-```js
+```tsx
 import * as React from 'react';
 import { ImageTile } from '../../../../common/components/ImageTile/ImageTile';
 import { Slider } from 'office-ui-fabric-react/lib/components/Slider/Slider';
