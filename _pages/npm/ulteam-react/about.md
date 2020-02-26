@@ -36,7 +36,9 @@ npm install --save ulteam-react@latest
 | [FilePicker](/npm/ulteam-react/filepicker/) | File picker based on HTML input with type="file".<br>Main features:<br>- You can pick one or several files.<br>- You can replace files or accumulate |
 | [FormApp](/npm/ulteam-react/formapp/) | Generate your form with controls from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.<br>Configure form fields and component aggregates all field values in one plain object. |
 | [GroupContent](/npm/ulteam-react/groupcontent/) | Component for expand and collapse content. Just wrap your JSX elements. |
-| [ImageTile](/npm/ulteam-react/imagetile/) | Tile with image and data |
+| [ImageTile](/npm/ulteam-react/imagetile/) | Tile with image and data. |
 | [NumberField](/npm/ulteam-react/numberfield/) | Component is based on TextField from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.<br>Properties extends TextField component props. |
+| [PaginationDots](/npm/ulteam-react/paginationdots/) | Pagination dots with or not arrows. |
+| [Slider](/npm/ulteam-react/slider/) | Horizontal slider with animation. |
 | [UlPeoplePicker](/npm/ulteam-react/ulpeoplepicker/) | People picker based on NormalPeoplePicker component from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.<br>It's just more convenient NormalPeoplePicker component. |
 | [UlTable](/npm/ulteam-react/ultable/) | Generate your table with controls from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.<br>Configure table fields and component aggregates all rows values in one plain object.<br>Table has edit mode, shimmer mode. You can fix header or/and fix left columns. |

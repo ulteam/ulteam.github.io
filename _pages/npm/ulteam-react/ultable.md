@@ -14,7 +14,7 @@ Try component on the [demo](/npm/ulteam-react/demo/?r=basictable)
 
 ### Sample
 
-```js
+```tsx
 import { Icon } from 'office-ui-fabric-react/lib/components/Icon/Icon';
 import * as React from 'react';
 import { FormFields, INumberFieldProps, IUlTableRow } from '../../../..';
@@ -85,7 +85,7 @@ export class TestTablePage extends React.Component<{}, ITestTablePageState> {
           options={selectionModeOptions} 
           onChange={this.handleSelectionModeChange}
           defaultValue={UlTableSelectionMode.Multiple}
-          style={{ width: 200 }}
+          style={ { width: 200 } }
         />
         <div className="form">
           <UlTable 

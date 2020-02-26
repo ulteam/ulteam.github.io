@@ -12,11 +12,12 @@ Try component on the [demo](/npm/ulteam-react/demo/?r=errorhandler)
 
 ### Sample
 
-```js
+```tsx
 import * as React from 'react';
 import { AzureLogger } from 'ulteam-scripts/lib';
 import { ErrorHandler } from '../../../..';
 import { ThrowErrorComponent } from '../ThrowErrorComponent/ThrowErrorComponent';
+import { IMessageBarProps } from 'office-ui-fabric-react/lib/components/MessageBar/MessageBar.types';
 
 /**
  * Debug common components
@@ -35,10 +36,12 @@ export class TestErrorHandler extends React.Component<{}, {}> {
   }
   
   public render() {
+    const messageBarProps: IMessageBarProps = { isMultiline: true };
+
     return (
       <div>
         <div>
-          <ErrorHandler azureLogger={this.azureLogger} messageBarProps={{ isMultiline: true }}>
+          <ErrorHandler azureLogger={this.azureLogger} messageBarProps={messageBarProps}>
             <ThrowErrorComponent />
           </ErrorHandler>
         </div>

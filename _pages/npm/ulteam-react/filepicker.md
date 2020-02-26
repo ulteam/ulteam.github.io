@@ -15,7 +15,7 @@ Try component on the [demo](/npm/ulteam-react/demo/?r=filepicker)
 
 ### Sample
 
-```js
+```tsx
 import * as React from 'react';
 import { FilePicker, IFilePickerResult } from '../../../../common/components/FilePicker/FilePicker';
 

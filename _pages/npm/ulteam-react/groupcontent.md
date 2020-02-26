@@ -12,7 +12,7 @@ Try component on the [demo](/npm/ulteam-react/demo/?r=groupcontent)
 
 ### Sample
 
-```js
+```tsx
 import * as React from 'react';
 import { GroupContent } from '../../../../common/components/GroupContent/GroupContent';
 
