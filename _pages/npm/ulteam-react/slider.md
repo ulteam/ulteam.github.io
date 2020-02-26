@@ -32,7 +32,7 @@ interface ITestSliderState {
 }
 
 /**
- * Test ImageTile component
+ * Test Slider component
  */
 export class TestSlider extends React.Component<{}, ITestSliderState> {
   private itemWidth = 150;

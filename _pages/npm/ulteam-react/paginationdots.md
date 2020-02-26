@@ -24,7 +24,7 @@ interface ITestPaginationDotsState {
 }
 
 /**
- * Test ImageTile component
+ * Test PaginationDots component
  */
 export class TestPaginationDots extends React.Component<{}, ITestPaginationDotsState> {
   constructor(props: {}) {

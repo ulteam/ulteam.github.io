@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.36.0
+- feat: add UlEvent component
+
 #### v2.35.3
 - fix: add PaginationDots sass file to Slider sass file
 
