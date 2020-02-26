@@ -5,6 +5,10 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.34.1
+- fix: add background-color to ImageTile if image not found. 
+- fix: set ImageTile photoPlacholder prop as optional
+
 #### v2.34.0
 - feat: add ImageTile props: maxHeight, maxWidth, id, onClick, tileTitle
 

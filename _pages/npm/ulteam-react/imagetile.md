@@ -59,6 +59,7 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
           onChange={this.handleHeight}
         />
         <ImageTile
+          key={1}
           maxHeight={this.state.height}
           maxWidth={this.state.width}
           minHeight={this.state.height}
@@ -72,6 +73,20 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
         >
           My additional html
         </ImageTile>
+        <h3>ImageTile without image</h3>
+        <ImageTile
+          key={2}
+          maxHeight={this.state.height}
+          maxWidth={this.state.width}
+          minHeight={this.state.height}
+          minWidth={this.state.width}
+          id="my image tile"
+          onClick={this.handleOnClick}
+          photo="/wrong/url"
+          tileTitle="My title"
+          text="Main text"
+          secondaryText="Secondary text"
+        ></ImageTile>
       </div>
     );
   }
@@ -103,7 +118,7 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
  | minWidth |  |  *number \| string* |     Image min width. Standard CSS width property       |  
  | onClick | `Optional` |  *function* |     Tile onClick event       |  
  | photo | `Optional` |  *string* |     Image url       |  
- | photoPlaceholder |  |  *string* |     Define placeholder url, if Image is not exist       |  
+ | photoPlaceholder | `Optional` |  *string* |     Define placeholder url, if Image is not exist       |  
  | secondaryText | `Optional` |  *string* |     Secondary text to display, usually the user first name       |  
  | style | `Optional` |  *CSSProperties* |     Add custom standard styles to component       |  
  | text | `Optional` |  *string* |     Main text to display, usually the user last name       |  
