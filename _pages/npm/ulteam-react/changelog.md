@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.35.2
+- fix: Slider: hide pagination if item count less than showCount
+
 #### v2.35.1
 - docs: add pages for PaginationDots & Slider components
 

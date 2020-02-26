@@ -18,10 +18,14 @@ import { ImageTile } from '../../../../common/components/ImageTile/ImageTile';
 import { Slider } from '../../../../common/components/Slider/Slider';
 import { SliderPaginationType } from '../../../../common/components/Slider/Slider.types';
 import { Slider as OfficeUiSlider} from 'office-ui-fabric-react/lib/components/Slider/Slider';
+import { Dropdown } from 'office-ui-fabric-react/lib/components/Dropdown/Dropdown';
+import { IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown/Dropdown.types';
 
 interface ITestSliderState {
   arrowFontSize: number;
   dotFontSize: number;
+  itemCount: number;
+  paginationType: SliderPaginationType;
   scrollBy: number;
   showCount: number;
   transitionDuration: number;
@@ -41,6 +45,8 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
     this.state = {
       arrowFontSize: 20,
       dotFontSize: 13,
+      itemCount: 25,
+      paginationType: SliderPaginationType.ArrowsAndDots,
       scrollBy: 3,
       showCount: 5,
       transitionDuration: 0.5
@@ -58,7 +64,7 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
           step={1}
           defaultValue={this.state.arrowFontSize}
           showValue={true}
-          onChange={(value: number) => {this.setState({arrowFontSize: value})}}
+          onChange={(value: number) => {this.setState({arrowFontSize: value})} }
         />
         <OfficeUiSlider
           label="Dot font size"
@@ -67,7 +73,7 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
           step={1}
           defaultValue={this.state.dotFontSize}
           showValue={true}
-          onChange={(value: number) => {this.setState({dotFontSize: value})}}
+          onChange={(value: number) => {this.setState({dotFontSize: value})} }
         />
         <OfficeUiSlider
           label="Number of items for scrolling"
@@ -76,7 +82,16 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
           step={1}
           defaultValue={this.state.scrollBy}
           showValue={true}
-          onChange={(value: number) => {this.setState({scrollBy: value})}}
+          onChange={(value: number) => {this.setState({scrollBy: value})} }
+        />
+        <OfficeUiSlider
+          label="Number of items"
+          min={1}
+          max={50}
+          step={1}
+          defaultValue={this.state.itemCount}
+          showValue={true}
+          onChange={(value: number) => {this.setState({itemCount: value})} }
         />
         <OfficeUiSlider
           label="Number of items to display"
@@ -85,7 +100,7 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
           step={1}
           defaultValue={this.state.showCount}
           showValue={true}
-          onChange={(value: number) => {this.setState({showCount: value})}}
+          onChange={(value: number) => {this.setState({showCount: value})} }
         />
         <OfficeUiSlider
           label="Animation transition duration in seconds"
@@ -94,7 +109,27 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
           step={0.1}
           defaultValue={this.state.transitionDuration}
           showValue={true}
-          onChange={(value: number) => {this.setState({transitionDuration: value})}}
+          onChange={(value: number) => {this.setState({transitionDuration: value})} }
+        />
+        <Dropdown
+          label="Pagination type"
+          placeholder="ArrowsAndDots"
+          options={[
+            {
+              key: 'ArrowsAndDots',
+              text: 'ArrowsAndDots'
+            },
+            {
+              key: 'Arrows',
+              text: 'Arrows'
+            },
+            {
+              key: 'Dots',
+              text: 'Dots'
+            }
+          ]}
+          onChange={this.handleOnChangeType}
+          style={ {width: 180} }
         />
         <div className="emptyHeight"></div>
         
@@ -103,7 +138,7 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
           items={this.getItems()}
           arrowFontSize={this.state.arrowFontSize}
           dotFontSize={this.state.dotFontSize}
-          paginationType={SliderPaginationType.ArrowsAndDots}
+          paginationType={this.state.paginationType}
           scrollBy={this.state.scrollBy}
           showCount={this.state.showCount}
           transitionDuration={this.state.transitionDuration}
@@ -117,7 +152,7 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
 
     const style = { padding: this.itemPadding }
     
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < this.state.itemCount; i++) {
       result.push((
         <ImageTile
           key={i}
@@ -138,6 +173,13 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
     return result;
   }
 
+  public handleOnChangeType = (event: any, option?: IDropdownOption | undefined) => {
+    if (option && option.key) {
+      const paginationType = option.key.toString() as SliderPaginationType;
+      this.setState({ paginationType });
+    }
+  }
+
   public handleOnClick = (id?: number | string) => {
     console.log(`click on ${id}`);
   }
@@ -151,14 +193,14 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
 |-|-|-|-|
  | arrowFontSize | `Optional` |  *number* |     Pagination arrow font size in pixels       |  
  | className | `Optional` |  *string* |     Add custom class to component       |  
- | defaultPageIndex | `Optional` |  *number* |     Set default page index       |  
+ | defaultPageIndex | `Optional` |  *number* |     Set default page integer index       |  
  | dotFontSize | `Optional` |  *number* |     Pagination dot font size in pixels if paginationType is SliderPaginationType.ArrowsAndDots       |  
  | itemWidth |  |  *number* |     An item width including paddings and margins       |  
  | items |  |  *Element[]* |     All slider's elements       |  
  | paginationClassName | `Optional` |  *string* |     Add your own class to pagination controls       |  
  | paginationStyle | `Optional` |  *CSSProperties* |     Add your own style to pagination controls       |  
  | paginationType | `Optional` |  *SliderPaginationType* |     Select pagination type.      **`default`** SliderPaginationType.Dots      |  
- | scrollBy |  |  *number* |     Number of items for scrolling       |  
- | showCount |  |  *number* |     Number of items to display       |  
+ | scrollBy |  |  *number* |     Integer number of items for scrolling       |  
+ | showCount |  |  *number* |     Integer number of items to display       |  
  | style | `Optional` |  *CSSProperties* |     Add custom standard styles to component       |  
  | transitionDuration | `Optional` |  *number* |     Animation transition duration in seconds       |
