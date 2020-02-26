@@ -24,7 +24,7 @@ email: chernyshev@ulteam.ru
 name: "Ulteam LLC"
 tagline: "This is documentation site for Ulteam npm and NuGet packages."
 author: "Ulteam"
-google-site-verification: "l3KJvsUx8yzlg1GZPEJv95HoSI7jwSmmdku4t0MUBcE"
+google_site_verification: "l3KJvsUx8yzlg1GZPEJv95HoSI7jwSmmdku4t0MUBcE"
 description: >- # this means to ignore newlines until "baseurl:"
   This is documentation site for Ulteam npm and NuGet packages.
 baseurl: "" # the subpath of your site, e.g. /blog
