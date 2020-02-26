@@ -46,6 +46,10 @@ npm:
         url: /npm/ulteam-react/imagetile/
       - title: "- NumberField"
         url: /npm/ulteam-react/numberfield/
+      - title: "- PaginationDots"
+        url: /npm/ulteam-react/paginationdots/
+      - title: "- Slider"
+        url: /npm/ulteam-react/slider/
       - title: "- UlPeoplePicker"
         url: /npm/ulteam-react/ulpeoplepicker/
       - title: "- UlTable"

@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-# title: Ulteam
-# subtitle: "Libraries"
+title: Ulteam
+subtitle: "Libraries"
 email: chernyshev@ulteam.ru
 name: "Ulteam LLC"
 description: >- # this means to ignore newlines until "baseurl:"
