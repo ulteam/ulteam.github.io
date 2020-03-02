@@ -20,10 +20,12 @@ import { SliderPaginationType } from '../../../../common/components/Slider/Slide
 import { Slider as OfficeUiSlider} from 'office-ui-fabric-react/lib/components/Slider/Slider';
 import { Dropdown } from 'office-ui-fabric-react/lib/components/Dropdown/Dropdown';
 import { IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown/Dropdown.types';
+import { Toggle } from 'office-ui-fabric-react/lib/components/Toggle/Toggle';
 
 interface ITestSliderState {
   arrowFontSize: number;
   dotFontSize: number;
+  isShimmer: boolean;
   itemCount: number;
   paginationType: SliderPaginationType;
   scrollBy: number;
@@ -45,6 +47,7 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
     this.state = {
       arrowFontSize: 20,
       dotFontSize: 13,
+      isShimmer: false,
       itemCount: 25,
       paginationType: SliderPaginationType.ArrowsAndDots,
       scrollBy: 3,
@@ -131,9 +134,14 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
           onChange={this.handleOnChangeType}
           style={ {width: 180} }
         />
+        <Toggle label="Enable shimmer" onText="On" offText="Off" 
+          onChange={this.handleIsShimmer}
+          defaultChecked={this.state.isShimmer}
+        />
         <div className="emptyHeight"></div>
         
         <Slider
+          isShimmer={this.state.isShimmer}
           itemWidth={this.itemWidth + this.itemPadding * 2}
           items={this.getItems()}
           arrowFontSize={this.state.arrowFontSize}
@@ -161,6 +169,7 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
           minHeight={this.itemWidth}
           minWidth={this.itemWidth}
           id={i}
+          isShimmer={this.state.isShimmer}
           photoPlaceholder={this.placeholder}
           onClick={this.handleOnClick}
           text={`Main text ${i}`}
@@ -171,6 +180,12 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
     }
 
     return result;
+  }
+
+  private handleIsShimmer = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
+    this.setState({
+      isShimmer: checked ? checked : false
+    });
   }
 
   public handleOnChangeType = (event: any, option?: IDropdownOption | undefined) => {
@@ -195,6 +210,7 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
  | className | `Optional` |  *string* |     Add custom class to component       |  
  | defaultPageIndex | `Optional` |  *number* |     Set default page integer index       |  
  | dotFontSize | `Optional` |  *number* |     Pagination dot font size in pixels if paginationType is SliderPaginationType.ArrowsAndDots       |  
+ | isShimmer | `Optional` |  *boolean* |     Enable shimmer mode. This prop react only for pagination.       |  
  | itemWidth |  |  *number* |     An item width including paddings and margins       |  
  | items |  |  *Element[]* |     All slider's elements       |  
  | paginationClassName | `Optional` |  *string* |     Add your own class to pagination controls       |  

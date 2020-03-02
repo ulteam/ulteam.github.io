@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.37.0
+- feat: add isShimmer prop to UlEvent, Slider, ImageTile, PaginationDots components
+
 #### v2.36.0
 - feat: add UlEvent component
 

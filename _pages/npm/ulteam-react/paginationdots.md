@@ -16,11 +16,13 @@ Try component on the [demo](/npm/ulteam-react/demo/?r=paginationdots)
 import * as React from 'react';
 import { PaginationDots } from '../../../../common/components/PaginationDots/PaginationDots';
 import { Slider } from 'office-ui-fabric-react/lib/components/Slider/Slider';
+import { Toggle } from 'office-ui-fabric-react/lib/components/Toggle/Toggle';
 
 interface ITestPaginationDotsState {
   arrowFontSize: number;
   dotCount: number;
   dotFontSize: number;
+  isShimmer: boolean;
 }
 
 /**
@@ -33,7 +35,8 @@ export class TestPaginationDots extends React.Component<{}, ITestPaginationDotsS
     this.state = {
       arrowFontSize: 16,
       dotCount: 10,
-      dotFontSize: 13
+      dotFontSize: 13,
+      isShimmer: false
     };
   }
   
@@ -41,33 +44,37 @@ export class TestPaginationDots extends React.Component<{}, ITestPaginationDotsS
     return (
       <div>
         <h3>PaginationDots component</h3>
-          <Slider
-            label="Dot count"
-            min={3}
-            max={20}
-            step={1}
-            defaultValue={this.state.dotCount}
-            showValue={true}
-            onChange={(value: number) => {this.setState({dotCount: value})}}
-          />
-          <Slider
-            label="Arrow font size"
-            min={5}
-            max={40}
-            step={1}
-            defaultValue={this.state.arrowFontSize}
-            showValue={true}
-            onChange={(value: number) => {this.setState({arrowFontSize: value})}}
-          />
-          <Slider
-            label="Dot font size"
-            min={5}
-            max={30}
-            step={1}
-            defaultValue={this.state.dotFontSize}
-            showValue={true}
-            onChange={(value: number) => {this.setState({dotFontSize: value})}}
-          />
+        <Slider
+          label="Dot count"
+          min={3}
+          max={20}
+          step={1}
+          defaultValue={this.state.dotCount}
+          showValue={true}
+          onChange={(value: number) => {this.setState({dotCount: value})}}
+        />
+        <Slider
+          label="Arrow font size"
+          min={5}
+          max={40}
+          step={1}
+          defaultValue={this.state.arrowFontSize}
+          showValue={true}
+          onChange={(value: number) => {this.setState({arrowFontSize: value})}}
+        />
+        <Slider
+          label="Dot font size"
+          min={5}
+          max={30}
+          step={1}
+          defaultValue={this.state.dotFontSize}
+          showValue={true}
+          onChange={(value: number) => {this.setState({dotFontSize: value})}}
+        />
+        <Toggle label="Enable shimmer" onText="On" offText="Off" 
+          onChange={this.handleIsShimmer}
+          defaultChecked={this.state.isShimmer}
+        />
         <div className="emptyHeight"></div>
         <PaginationDots
           activeDotIndex={0}
@@ -75,10 +82,17 @@ export class TestPaginationDots extends React.Component<{}, ITestPaginationDotsS
           arrowFontSize={this.state.arrowFontSize}
           dotCount={this.state.dotCount}
           dotFontSize={this.state.dotFontSize}
+          isShimmer={this.state.isShimmer}
           onClick={this.handleOnClick}
         />
       </div>
     );
+  }
+
+  private handleIsShimmer = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
+    this.setState({
+      isShimmer: checked ? checked : false
+    });
   }
 
   public handleOnClick = (dotIndex: number) => {
@@ -98,5 +112,6 @@ export class TestPaginationDots extends React.Component<{}, ITestPaginationDotsS
  | className | `Optional` |  *string* |     Add custom class to component       |  
  | dotCount |  |  *number* |     Number of dots or pages       |  
  | dotFontSize | `Optional` |  *number* |     Dot font size in pixels       |  
+ | isShimmer | `Optional` |  *boolean* |     Enable shimmer mode       |  
  | onClick | `Optional` |  *function* |     Set custom behavior       |  
  | style | `Optional` |  *CSSProperties* |     Add custom standard styles to component       |

@@ -19,6 +19,7 @@ import { Toggle } from 'office-ui-fabric-react/lib/components/Toggle/Toggle';
 import { UlEventMonthLocale } from '../../../../common/components/UlEvent/UlEvent.types';
 
 interface ITestImageTileState {
+  isShimmer: boolean;
   useLongMonth: boolean;
   useRuLocale: boolean;
 }
@@ -31,6 +32,7 @@ export class TestUlEvent extends React.Component<{}, ITestImageTileState> {
     super(props);
 
     this.state = {
+      isShimmer: false,
       useLongMonth: false,
       useRuLocale: false
     }
@@ -48,10 +50,15 @@ export class TestUlEvent extends React.Component<{}, ITestImageTileState> {
           onChange={this.handleUseRuLocale}
           defaultChecked={this.state.useRuLocale}
         />
+        <Toggle label="Enable shimmer" onText="On" offText="Off" 
+          onChange={this.handleIsShimmer}
+          defaultChecked={this.state.isShimmer}
+        />
         <div className="emptyHeight"></div>
 
         <UlEvent 
           date={new Date()} 
+          isShimmer={this.state.isShimmer}
           monthLocale={this.state.useRuLocale === true ? UlEventMonthLocale.Ru : undefined}
           title="Today event title"
           useLongMonth={this.state.useLongMonth}
@@ -60,6 +67,12 @@ export class TestUlEvent extends React.Component<{}, ITestImageTileState> {
         </UlEvent>
       </div>
     );
+  }
+
+  private handleIsShimmer = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
+    this.setState({
+      isShimmer: checked ? checked : false
+    });
   }
 
   private handleUseLongMonth = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
@@ -84,6 +97,7 @@ export class TestUlEvent extends React.Component<{}, ITestImageTileState> {
  | className | `Optional` |  *string* |     Add custom class to component       |  
  | customLocale | `Optional` |  *string[]* |     You might use your own month names. Just set string array.       |  
  | date |  |  *Date* |     Event date       |  
+ | isShimmer | `Optional` |  *boolean* |     Enable shimmer mode       |  
  | monthLocale | `Optional` |  *UlEventMonthLocale* |     Choose predefined locale for month names       |  
  | style | `Optional` |  *CSSProperties* |     Add custom standard styles to component       |  
  | title | `Optional` |  *string* |     Event title text       |  

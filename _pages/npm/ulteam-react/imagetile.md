@@ -16,9 +16,11 @@ Try component on the [demo](/npm/ulteam-react/demo/?r=imagetile)
 import * as React from 'react';
 import { ImageTile } from '../../../../common/components/ImageTile/ImageTile';
 import { Slider } from 'office-ui-fabric-react/lib/components/Slider/Slider';
+import { Toggle } from 'office-ui-fabric-react/lib/components/Toggle/Toggle';
 
 interface ITestImageTileState {
   height: number;
+  isShimmer: boolean;
   width: number;
 }
 
@@ -31,6 +33,7 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
 
     this.state = {
       height: 150,
+      isShimmer: false,
       width: 150
     }
   }
@@ -58,8 +61,14 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
           showValue={true}
           onChange={this.handleHeight}
         />
+        <Toggle label="Enable shimmer" onText="On" offText="Off" 
+          onChange={this.handleIsShimmer}
+          defaultChecked={this.state.isShimmer}
+        />
+        <div className="emptyHeight"></div>
         <ImageTile
           key={1}
+          isShimmer={this.state.isShimmer}
           maxHeight={this.state.height}
           maxWidth={this.state.width}
           minHeight={this.state.height}
@@ -76,6 +85,7 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
         <h3>ImageTile without image</h3>
         <ImageTile
           key={2}
+          isShimmer={this.state.isShimmer}
           maxHeight={this.state.height}
           maxWidth={this.state.width}
           minHeight={this.state.height}
@@ -95,6 +105,12 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
     this.setState({ height: value });
   }
 
+  private handleIsShimmer = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
+    this.setState({
+      isShimmer: checked ? checked : false
+    });
+  }
+
   public handleOnClick = (id?: number | string) => {
     console.log(`click on ${id}`);
   }
@@ -112,6 +128,7 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
 |-|-|-|-|
  | className | `Optional` |  *string* |     Add custom class to component       |  
  | id | `Optional` |  *number \| string* |     Tile id. Use prop for onClick callback       |  
+ | isShimmer | `Optional` |  *boolean* |     Enable shimmer mode       |  
  | maxHeight | `Optional` |  *number \| string* |     Image max height. Standard CSS height property       |  
  | maxWidth | `Optional` |  *number \| string* |     Image max width. Standard CSS width property       |  
  | minHeight |  |  *number \| string* |     Image min height. Standard CSS height property       |  
