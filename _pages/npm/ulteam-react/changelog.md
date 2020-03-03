@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.37.1
+- fix: UlEvent width fix in IE
+
 #### v2.37.0
 - feat: add isShimmer prop to UlEvent, Slider, ImageTile, PaginationDots components
 
