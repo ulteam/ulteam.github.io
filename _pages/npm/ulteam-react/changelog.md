@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.37.2
+- fix: error in console if in BlogTile imageUrl prop is undefined
+
 #### v2.37.1
 - fix: UlEvent width fix in IE
 
