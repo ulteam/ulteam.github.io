@@ -9,14 +9,21 @@ search_full_content: true
 ### Yeoman generator for SharePoint
 We have written TypeScript templates for SharePoint classic.
 
-### Install the Generator
+### Install
 Install Yeoman and ulteam-sp generator:
 
 ```bash
 npm install -g yo generator-ulteam-sp
 ```
 
-### Run the Generator
+### Update
+Update generator to latest version:
+
+```bash
+npm install -g generator-ulteam-sp@latest
+```
+
+### Run
 
 The Yeoman generator will walk you through the steps required to create your customization or extension prompting for the required information.
 
