@@ -21,6 +21,9 @@ import { Toggle } from 'office-ui-fabric-react/lib/components/Toggle/Toggle';
 interface ITestImageTileState {
   height: number;
   isShimmer: boolean;
+
+  openLinkInNewTab?: boolean;
+
   width: number;
 }
 
@@ -65,9 +68,15 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
           onChange={this.handleIsShimmer}
           defaultChecked={this.state.isShimmer}
         />
+        <Toggle label="Open link in new tab" onText="On" offText="Off" 
+          onChange={this.handleOpenLinkInNewTag}
+          defaultChecked={this.state.openLinkInNewTab}
+        />
         <div className="emptyHeight"></div>
         <ImageTile
           key={1}
+          href={this.state.openLinkInNewTab === true ? 'https://google.com' : undefined}
+          target={this.state.openLinkInNewTab === true ? '_blank' : undefined}
           isShimmer={this.state.isShimmer}
           maxHeight={this.state.height}
           maxWidth={this.state.width}
@@ -85,6 +94,8 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
         <h3>ImageTile without image</h3>
         <ImageTile
           key={2}
+          href={this.state.openLinkInNewTab === true ? 'https://google.com' : undefined}
+          target={this.state.openLinkInNewTab === true ? '_blank' : undefined}
           isShimmer={this.state.isShimmer}
           maxHeight={this.state.height}
           maxWidth={this.state.width}
@@ -115,6 +126,10 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
     console.log(`click on ${id}`);
   }
 
+  private handleOpenLinkInNewTag = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
+    this.setState({ openLinkInNewTab: checked });
+  }
+
   public handleWidth = (value: number) => {
     this.setState({ width: value });
   }
@@ -127,6 +142,7 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
 | Property Name | Required | Type | Comments |
 |-|-|-|-|
  | className | `Optional` |  *string* |     Add custom class to component       |  
+ | href | `Optional` |  *string* |     Standard 'a' tag href attribute for title and description       |  
  | id | `Optional` |  *number \| string* |     Tile id. Use prop for onClick callback       |  
  | isShimmer | `Optional` |  *boolean* |     Enable shimmer mode       |  
  | maxHeight | `Optional` |  *number \| string* |     Image max height. Standard CSS height property       |  
@@ -138,5 +154,6 @@ export class TestImageTile extends React.Component<{}, ITestImageTileState> {
  | photoPlaceholder | `Optional` |  *string* |     Define placeholder url, if Image is not exist       |  
  | secondaryText | `Optional` |  *string* |     Secondary text to display, usually the user first name       |  
  | style | `Optional` |  *CSSProperties* |     Add custom standard styles to component       |  
+ | target | `Optional` |  *string* |     Standard 'a' tag target attribute for title and description       |  
  | text | `Optional` |  *string* |     Main text to display, usually the user last name       |  
  | tileTitle | `Optional` |  *string* |     Define standard title attribute for root div       |

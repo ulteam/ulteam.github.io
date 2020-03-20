@@ -22,6 +22,8 @@ import { FormApp, FormFields, IErrorField, IFormConfig, IFormField } from '../..
 import { INumberFieldProps } from '../../../../form/data/FieldTypes';
 import { IFormFieldDisabled, IFormFieldHidden } from '../../../../form/data/Interfaces';
 import { ITestFormPageState } from './ITestFormPageState';
+import { Toggle } from 'office-ui-fabric-react/lib/components/Toggle/Toggle';
+import { Icon } from 'office-ui-fabric-react/lib/components/Icon/Icon';
 
 export interface ISampleFields {
   title?: string;
@@ -36,29 +38,6 @@ export interface ISampleFields {
   conditionTextField?: string;
 }
 
-// const defaultValues: ISampleFields = {
-//   booleanField: false,
-//   choiceField: 2,
-//   doubleNumberField: 2,
-//   datePickerField: new Date(2000, 1, 1),
-//   conditionTextField: '',
-//   name: 'test name',
-//   numberField: 1,
-//   peoplePickerField: [{
-//     id: '1',
-//     text: 'User name 1',
-//     secondaryText: 'Job title 1'
-//   }],
-//   pickerField: [{
-//     key: 'Key 2',
-//     name: 'Value 2'
-//   }],
-//   title: 'test title'
-// };
-
-/**
- * Description
- */
 export class TestFormPage extends React.Component<{}, ITestFormPageState> {
   private currentFormFields: any = {};
   constructor(props: {}, state: ITestFormPageState) {
@@ -67,10 +46,18 @@ export class TestFormPage extends React.Component<{}, ITestFormPageState> {
     this.currentFormFields = this.getDefaultFormFields();
 
     this.state = {
+      addCustomLabel: false,
       disablePicker: true,
       formFields: this.getDefaultFormFields()
     };
   }
+
+  public shouldComponentUpdate(nextProps: {}, nextState: ITestFormPageState) {
+    return nextState.addCustomLabel !== this.state.addCustomLabel ||
+      nextState.disablePicker !== this.state.disablePicker ||
+      nextState.formFields !== this.state.formFields;
+  }
+
   public render() {
     console.log('state', this.state);
 
@@ -82,7 +69,8 @@ export class TestFormPage extends React.Component<{}, ITestFormPageState> {
         />
         <div>
           <h1>Labels on the top</h1>
-          <FormApp config={this.getFormConfig()}
+          <FormApp key={1}
+                  config={this.getFormConfig()}
                   customClass="custom-class"
                   fieldValues={this.state.formFields}
                   handleFieldValues={this.handleChangeFieldValues}
@@ -90,9 +78,14 @@ export class TestFormPage extends React.Component<{}, ITestFormPageState> {
 
         </div>
         <p></p>
+        <Toggle label="Add custom label html to 'Title' field" onText="On" offText="Off" 
+          onChange={this.handleAddCustomTable}
+          defaultChecked={this.state.addCustomLabel}
+        />
         <div>
           <h1>Labels on the left</h1>
-          <FormApp config={this.getFormConfig()}
+          <FormApp key={2}
+                  config={this.getFormConfig(this.state.addCustomLabel)}
                   fieldValues={this.state.formFields}
                   handleFieldValues={this.handleChangeFieldValues}
                   labelsOnTheLeft={true}
@@ -102,7 +95,8 @@ export class TestFormPage extends React.Component<{}, ITestFormPageState> {
         <p></p>
         <div>
           <h1>Required fieds</h1>
-          <FormApp config={this.getFormConfig()}
+          <FormApp key={3}
+                  config={this.getFormConfig()}
                   fieldValues={this.state.formFields}
                   handleFieldValues={this.handleChangeFieldValues}
                   checkRequired={true} />
@@ -112,6 +106,13 @@ export class TestFormPage extends React.Component<{}, ITestFormPageState> {
       </div>
     );
   }
+
+  private addLabelHtml = (config: IFormField<any>, fieldValue?: any, formId?: number | undefined): JSX.Element | undefined => {
+    return (
+      <Icon iconName="Info" title="Custom label html" style={ {fontSize: 16} } />
+    )
+  }
+
   private getDefaultFormFields(): ISampleFields {
     return {
       booleanField: false,
@@ -211,7 +212,7 @@ export class TestFormPage extends React.Component<{}, ITestFormPageState> {
     return errorField;
   }
 
-  public getFormConfig(): IFormConfig {
+  public getFormConfig(addCustomLabel?: boolean): IFormConfig {
     return {
       groups: [{
         expand: true,
@@ -220,6 +221,7 @@ export class TestFormPage extends React.Component<{}, ITestFormPageState> {
         fields: [
           FormFields.TextField('title', {
             label: 'Title',
+            onRenderLabel: addCustomLabel === true ? this.addLabelHtml : undefined,
             labelsOnTheLeftClassName: 'labelsOnTheLeft-class',
             customClass: 'customClass-class'
           },
@@ -348,6 +350,28 @@ export class TestFormPage extends React.Component<{}, ITestFormPageState> {
                 text: 'Text 3'
               }
             ]
+          }),
+          FormFields.ChoiceField('multiChoiceField', {
+            label: 'Multi Choice'
+          },
+          {
+            placeholder: 'Select a value',
+            multiSelect: true,
+            options: [
+              {
+                key: 1,
+                selected: true,
+                text: 'Text 1'
+              },
+              {
+                key: 10,
+                text: 'Text 10'
+              },
+              {
+                key: 3,
+                text: 'Text 3'
+              }
+            ]
           })
         ]
       },
@@ -369,6 +393,10 @@ export class TestFormPage extends React.Component<{}, ITestFormPageState> {
         ]
       }
     ]};
+  }
+
+  private handleAddCustomTable = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
+    this.setState({ addCustomLabel: checked });
   }
 
   private handleChangeFieldValues = (formFields: any, errorFields: IErrorField[]) => {

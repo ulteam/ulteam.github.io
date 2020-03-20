@@ -29,6 +29,8 @@ interface ITestState {
 
   noImage?: boolean;
 
+  openLinkInNewTab?: boolean;
+
   scaleImageOnHover?: boolean;
 
   slideInBottom?: boolean;
@@ -75,6 +77,8 @@ export class TestBlogTile extends React.Component<{}, ITestState> {
           <BlogTile 
             data={blogTileData}
             descriptionMaxSize={200}
+            href={this.state.openLinkInNewTab === true ? 'https://google.com' : undefined}
+            target={this.state.openLinkInNewTab === true ? '_blank' : undefined}
             tileHeight={250}
             onClick={this.handleOnClick}
             titleForComments="Number of comments"
@@ -107,6 +111,7 @@ export class TestBlogTile extends React.Component<{}, ITestState> {
  | data | `Optional` |  *IBlogTileData* |     Tile metadata       |  
  | descriptionMaxSize | `Optional` |  *number* |     Description max symbol number       |  
  | hideFooter | `Optional` |  *boolean* |     Whether hide footer (comments, likes, date) or not       |  
+ | href | `Optional` |  *string* |     Standard 'a' tag href attribute for title and description       |  
  | isShimmer | `Optional` |  *boolean* |     Enable shimmer mode       |  
  | likesIconName | `Optional` |  *string* |     Define your office-ui-fabric-react icon name for likes       |  
  | maxWidth |  |  *number \| string* |     Tile max width (if value is string then add 'px' or '%' to the end)       |  
@@ -116,6 +121,7 @@ export class TestBlogTile extends React.Component<{}, ITestState> {
  | slideInBottom | `Optional` |  *boolean* |     Add slide-in-bottom animation to blog data       |  
  | slideInBottomNoTitle | `Optional` |  *boolean* |     Whether hide blog title or not if slideInBottom = true       |  
  | style | `Optional` |  *CSSProperties* |     Add custom standard styles to component       |  
+ | target | `Optional` |  *string* |     Standard 'a' tag target attribute for title and description       |  
  | tileHeight |  |  *number \| string* |     Tile height (if value is string then add 'px' or '%' to the end)       |  
  | titleForComments | `Optional` |  *string* |     Define title property for comment icon       |  
  | titleForDate | `Optional` |  *string* |     Define title property for blog date       |  

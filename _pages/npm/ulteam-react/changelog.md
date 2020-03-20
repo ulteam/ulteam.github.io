@@ -5,6 +5,11 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.38.0
+- feat: change 'div' to 'a' tag in ImageTile, BlogTile, BlogTileBoard and add 'href', 'target' props to this components
+- feat: add onRenderLabel prop to FormApp fields common properties
+- feat: add multiSelect and multiSelectDelimiter options to choice field for FormApp component
+
 #### v2.37.2
 - fix: error in console if in BlogTile imageUrl prop is undefined
 

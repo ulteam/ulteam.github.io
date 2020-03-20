@@ -122,8 +122,16 @@ export class TestBlogTileBoard extends React.Component<{}, ITestState> {
           <div className="emptyHeight"></div>
           <BlogTileBoard 
             items={items}
-            mainTile={this.state.mainTileProps}
-            smallTile={this.state.smallTileProps}
+            mainTile={ {
+              ...this.state.mainTileProps,
+              href: this.state.mainTileProps.openLinkInNewTab === true ? 'https://google.com' : undefined,
+              target: this.state.mainTileProps.openLinkInNewTab === true ? '_blank' : undefined,
+            } }
+            smallTile={ {
+              ...this.state.smallTileProps,
+              href: this.state.smallTileProps.openLinkInNewTab === true ? 'https://google.com' : undefined,
+              target: this.state.smallTileProps.openLinkInNewTab === true ? '_blank' : undefined,
+            } } 
             boardHeight={this.state.boardHeight}
             isShimmer={this.state.mainTileProps.isShimmer}
             onClick={this.handleOnClick}
