@@ -60,6 +60,7 @@ export class TestBlogTile extends React.Component<{}, ITestState> {
       title: 'Awesome blog tile title',
       date: '14:57 | 20.06.2020',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus enim a consectetur mollis. In imperdiet venenatis urna, ut tempor augue sagittis quis. Nullam faucibus, sapien eget rutrum vehicula, ligula ex malesuada massa, eu congue turpis magna scelerisque metus. Sed gravida bibendum varius. Vivamus sed lorem dictum dolor volutpat maximus lacinia et enim. Praesent finibus, felis in consectetur sagittis, est est auctor ipsum, eu mollis orci dolor sit amet ligula. Pellentesque aliquet massa nulla, et pulvinar massa cursus ac. Nulla in mollis libero. Etiam at libero eu leo suscipit lacinia a at ligula. Quisque vel urna vehicula, efficitur sem non, convallis diam. Donec dictum vitae tortor non ullamcorper.',
+      href: this.state.openLinkInNewTab === true ? 'https://google.com' : undefined,
       imageUrl: this.state.noImage !== true ? 'https://i.picsum.photos/id/866/1920/1080.jpg' : undefined,
       numberOfComments: 5,
       numberOfLikes: 6
@@ -77,7 +78,6 @@ export class TestBlogTile extends React.Component<{}, ITestState> {
           <BlogTile 
             data={blogTileData}
             descriptionMaxSize={200}
-            href={this.state.openLinkInNewTab === true ? 'https://google.com' : undefined}
             target={this.state.openLinkInNewTab === true ? '_blank' : undefined}
             tileHeight={250}
             onClick={this.handleOnClick}
@@ -111,7 +111,6 @@ export class TestBlogTile extends React.Component<{}, ITestState> {
  | data | `Optional` |  *IBlogTileData* |     Tile metadata       |  
  | descriptionMaxSize | `Optional` |  *number* |     Description max symbol number       |  
  | hideFooter | `Optional` |  *boolean* |     Whether hide footer (comments, likes, date) or not       |  
- | href | `Optional` |  *string* |     Standard 'a' tag href attribute for title and description       |  
  | isShimmer | `Optional` |  *boolean* |     Enable shimmer mode       |  
  | likesIconName | `Optional` |  *string* |     Define your office-ui-fabric-react icon name for likes       |  
  | maxWidth |  |  *number \| string* |     Tile max width (if value is string then add 'px' or '%' to the end)       |  

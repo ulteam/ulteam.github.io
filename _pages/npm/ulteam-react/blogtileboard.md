@@ -80,6 +80,7 @@ export class TestBlogTileBoard extends React.Component<{}, ITestState> {
       title: 'Awesome blog tile title',
       date: '14:57 | 20.06.2020',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus enim a consectetur mollis. In imperdiet venenatis urna, ut tempor augue sagittis quis. Nullam faucibus, sapien eget rutrum vehicula, ligula ex malesuada massa, eu congue turpis magna scelerisque metus. Sed gravida bibendum varius. Vivamus sed lorem dictum dolor volutpat maximus lacinia et enim. Praesent finibus, felis in consectetur sagittis, est est auctor ipsum, eu mollis orci dolor sit amet ligula. Pellentesque aliquet massa nulla, et pulvinar massa cursus ac. Nulla in mollis libero. Etiam at libero eu leo suscipit lacinia a at ligula. Quisque vel urna vehicula, efficitur sem non, convallis diam. Donec dictum vitae tortor non ullamcorper.',
+      href: this.state.mainTileProps.openLinkInNewTab === true ? 'https://google.com' : undefined,
       imageUrl: this.state.mainTileProps.noImage !== true ? 'https://i.picsum.photos/id/866/1920/1080.jpg' : undefined,
       numberOfComments: 5,
       numberOfLikes: 0
@@ -124,12 +125,10 @@ export class TestBlogTileBoard extends React.Component<{}, ITestState> {
             items={items}
             mainTile={ {
               ...this.state.mainTileProps,
-              href: this.state.mainTileProps.openLinkInNewTab === true ? 'https://google.com' : undefined,
               target: this.state.mainTileProps.openLinkInNewTab === true ? '_blank' : undefined,
             } }
             smallTile={ {
               ...this.state.smallTileProps,
-              href: this.state.smallTileProps.openLinkInNewTab === true ? 'https://google.com' : undefined,
               target: this.state.smallTileProps.openLinkInNewTab === true ? '_blank' : undefined,
             } } 
             boardHeight={this.state.boardHeight}

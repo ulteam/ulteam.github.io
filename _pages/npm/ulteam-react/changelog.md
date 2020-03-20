@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.38.1
+- fix: replace href prop from IBlogTileProps to IBlogTileData
+
 #### v2.38.0
 - feat: change 'div' to 'a' tag in ImageTile, BlogTile, BlogTileBoard and add 'href', 'target' props to this components
 - feat: add onRenderLabel prop to FormApp fields common properties
