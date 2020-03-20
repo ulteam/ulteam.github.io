@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.38.3
+- fix: animation error in BlogTile because of 'div' to 'a' replacement
+
 #### v2.38.2
 - fix: lint errors
 
