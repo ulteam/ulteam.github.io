@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.38.2
+- fix: lint errors
+
 #### v2.38.1
 - fix: replace href prop from IBlogTileProps to IBlogTileData
 
