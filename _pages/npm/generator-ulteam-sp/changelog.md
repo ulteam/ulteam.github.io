@@ -5,6 +5,9 @@ permalink: /npm/generator-ulteam-sp/changelog/
 
 ### Changelog
 
+#### v1.5.2
+- fix: error in .browserslistrc file
+
 #### v1.5.1
 - fix: delete awesome-typescript-loader from gulpfile.js
 
