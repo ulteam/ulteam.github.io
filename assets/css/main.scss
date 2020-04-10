@@ -24,6 +24,12 @@ $whiteColor: #ffffff;
   }
 }
 
+@media (min-width: 80em) {
+  div#main {
+    max-width: 1680px;
+  }
+}
+
 article.page .pagination {
   display: none;
 }
