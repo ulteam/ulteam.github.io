@@ -5,6 +5,10 @@ permalink: /npm/generator-ulteam-sp/changelog/
 
 ### Changelog
 
+#### v1.6.0
+- feat: add 'Grid web parts on React in one project' template
+- feat: add feature for add new web part
+
 #### v1.5.2
 - fix: error in .browserslistrc file
 

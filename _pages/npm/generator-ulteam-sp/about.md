@@ -32,3 +32,20 @@ To launch the generator simply type:
 ```bash
 yo ulteam-sp
 ```
+
+### Templates
+
+| Name | Description |
+|-|-|
+| Typescript | Blank typescript template |
+| React empty app | React project with only JS + CSS bundle |
+| React + Redux empty app | React empty app template with Redux store |
+| Grid web part on React | React project with GridWebPart component for ulteam-grid |
+| Grid web parts on React in one project | Optimization project with multiple web parts for ulteam-grid |
+
+### Add new web part
+
+In existing project type command below for add new web part
+```bash
+yo ulteam-sp --add
+```
