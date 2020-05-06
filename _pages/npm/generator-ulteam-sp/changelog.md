@@ -5,6 +5,9 @@ permalink: /npm/generator-ulteam-sp/changelog/
 
 ### Changelog
 
+#### v1.6.2
+- fix: add source map from node_modules to development bundle
+
 #### v1.6.1
 - fix: add .babelrc file
 - fix: change bundle map file name from *.bundle.map to *.bundle.js.map
