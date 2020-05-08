@@ -23,5 +23,5 @@ There is documentation site for our [npm](https://www.npmjs.com/~ulteam) package
 
 - Ulteam.XML
 - Ulteam.Common
-- Ulteam.SharePoint
+- [Ulteam.SharePoint](/nuget/Ulteam.SharePoint/about/)
 - Ulteam.SharePoint.Client

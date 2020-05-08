@@ -4,6 +4,8 @@ main:
     url: /
   - title: npm
     url: /npm/
+  - title: nuget
+    url: /nuget/
   - title: react-demo
     url: /npm/ulteam-react/demo/
 
@@ -76,3 +78,27 @@ npm:
         url: /npm/generator-ulteam-sp/about/
       - title: "changelog"
         url: /npm/generator-ulteam-sp/changelog/
+
+nuget:
+  - title: Ulteam.SharePoint
+    children:
+      - title: "about"
+        url: /nuget/Ulteam.SharePoint/about/
+      - title: "- DateTimeHelper"
+        url: /nuget/Ulteam.SharePoint/datetimehelper/
+      - title: "- FieldValue"
+        url: /nuget/Ulteam.SharePoint/fieldvalue/
+      - title: "- ListInitialization"
+        url: /nuget/Ulteam.SharePoint/listinitialization/
+      - title: "- Lists"
+        url: /nuget/Ulteam.SharePoint/lists/
+      - title: "- Logger"
+        url: /nuget/Ulteam.SharePoint/logger/
+      - title: "- Notifications"
+        url: /nuget/Ulteam.SharePoint/notifications/
+      - title: "- Parser"
+        url: /nuget/Ulteam.SharePoint/parser/
+      - title: "- Permissions"
+        url: /nuget/Ulteam.SharePoint/permissions/
+      - title: "changelog"
+        url: /nuget/Ulteam.SharePoint/changelog/
