@@ -8,6 +8,9 @@ sidebar:
 ﻿
 ### changelog
 
+#### v1.7.3
+- docs: fixes for documentation site
+
 #### v1.7.2
 - fix: duplicate SPView fields in Lists.CreateOrUpdateListView method
 
