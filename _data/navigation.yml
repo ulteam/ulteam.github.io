@@ -102,3 +102,25 @@ nuget:
         url: /nuget/Ulteam.SharePoint/permissions/
       - title: "changelog"
         url: /nuget/Ulteam.SharePoint/changelog/
+  - title: Ulteam.SharePoint.Client
+    children:
+      - title: "about"
+        url: /nuget/Ulteam.SharePoint.Client/about/
+      - title: "- Common"
+        url: /nuget/Ulteam.SharePoint.Client/common/
+      - title: "- FieldValue"
+        url: /nuget/Ulteam.SharePoint.Client/fieldvalue/
+      - title: "- ListInitialization"
+        url: /nuget/Ulteam.SharePoint.Client/listinitialization/
+      - title: "- Lists"
+        url: /nuget/Ulteam.SharePoint.Client/lists/
+      - title: "- Logger"
+        url: /nuget/Ulteam.SharePoint.Client/logger/
+      - title: "- Notifications"
+        url: /nuget/Ulteam.SharePoint.Client/notifications/
+      - title: "- Parser"
+        url: /nuget/Ulteam.SharePoint.Client/parser/
+      - title: "- Permissions"
+        url: /nuget/Ulteam.SharePoint.Client/permissions/
+      - title: "changelog"
+        url: /nuget/Ulteam.SharePoint.Client/changelog/

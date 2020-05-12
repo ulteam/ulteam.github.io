@@ -10,4 +10,4 @@ sidebar:
 - Ulteam.XML
 - Ulteam.Common
 - [Ulteam.SharePoint](/nuget/Ulteam.SharePoint/about/)
-- Ulteam.SharePoint.Client
+- [Ulteam.SharePoint.Client](/nuget/Ulteam.SharePoint.Client/about/)
