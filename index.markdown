@@ -9,7 +9,7 @@ header:
 
 ## About
 
-There is documentation site for our [npm](https://www.npmjs.com/~ulteam) packages and [NuGet](https://www.nuget.org/profiles/Ulteam) packages.
+This is documentation site for our [npm](https://www.npmjs.com/~ulteam) packages and [NuGet](https://www.nuget.org/profiles/Ulteam) packages.
 
 
 ### npm packages
