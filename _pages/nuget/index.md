@@ -8,6 +8,6 @@ sidebar:
 ---
 
 - Ulteam.XML
-- Ulteam.Common
+- [Ulteam.Common](/nuget/Ulteam.Common/about/)
 - [Ulteam.SharePoint](/nuget/Ulteam.SharePoint/about/)
 - [Ulteam.SharePoint.Client](/nuget/Ulteam.SharePoint.Client/about/)

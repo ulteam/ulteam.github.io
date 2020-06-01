@@ -80,6 +80,14 @@ npm:
         url: /npm/generator-ulteam-sp/changelog/
 
 nuget:
+  - title: Ulteam.Common
+    children:
+      - title: "about"
+        url: /nuget/Ulteam.Common/about/
+      - title: "- AzureLogger"
+        url: /nuget/Ulteam.Common/azurelogger/
+      - title: "changelog"
+        url: /nuget/Ulteam.Common/changelog/
   - title: Ulteam.SharePoint
     children:
       - title: "about"
