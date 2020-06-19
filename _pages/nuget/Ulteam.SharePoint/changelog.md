@@ -8,6 +8,9 @@ sidebar:
 ﻿
 ### changelog
 
+#### v1.7.4
+- fix: issue with not updated list Title in browser if language pack was installed to SharePoint
+
 #### v1.7.3
 - docs: fixes for documentation site
 
