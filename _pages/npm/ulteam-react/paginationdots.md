@@ -112,6 +112,7 @@ export class TestPaginationDots extends React.Component<{}, ITestPaginationDotsS
  | className | `Optional` |  *string* |     Add custom class to component       |  
  | dotCount |  |  *number* |     Number of dots or pages       |  
  | dotFontSize | `Optional` |  *number* |     Dot font size in pixels       |  
+ | hideArrowOnLastAndFirstPage | `Optional` |  *boolean* |     Activate this option if you want to hide left arrow on the first page and right arrow on the last page       |  
  | isShimmer | `Optional` |  *boolean* |     Enable shimmer mode       |  
  | onClick | `Optional` |  *function* |     Set custom behavior       |  
  | style | `Optional` |  *CSSProperties* |     Add custom standard styles to component       |

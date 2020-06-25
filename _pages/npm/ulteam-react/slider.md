@@ -24,12 +24,17 @@ import { Toggle } from 'office-ui-fabric-react/lib/components/Toggle/Toggle';
 
 interface ITestSliderState {
   arrowFontSize: number;
+  arrowsInside: boolean;
   dotFontSize: number;
+  hideArrowOnLastAndFirstPage: boolean;
+  isCarousel: boolean;
   isShimmer: boolean;
+  isSlideshow: boolean;
   itemCount: number;
   paginationType: SliderPaginationType;
   scrollBy: number;
   showCount: number;
+  showHalfItems: boolean;
   transitionDuration: number;
 }
 
@@ -46,12 +51,17 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
 
     this.state = {
       arrowFontSize: 20,
+      arrowsInside: false,
       dotFontSize: 13,
+      hideArrowOnLastAndFirstPage: false,
+      isCarousel: false,
       isShimmer: false,
+      isSlideshow: false,
       itemCount: 25,
       paginationType: SliderPaginationType.ArrowsAndDots,
       scrollBy: 3,
       showCount: 5,
+      showHalfItems: false,
       transitionDuration: 0.5
     };
   }
@@ -98,7 +108,7 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
         />
         <OfficeUiSlider
           label="Number of items to display"
-          min={5}
+          min={1}
           max={8}
           step={1}
           defaultValue={this.state.showCount}
@@ -123,6 +133,10 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
               text: 'ArrowsAndDots'
             },
             {
+              key: 'TopArrowsAndDots',
+              text: 'TopArrowsAndDots'
+            },
+            {
               key: 'Arrows',
               text: 'Arrows'
             },
@@ -138,9 +152,33 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
           onChange={this.handleIsShimmer}
           defaultChecked={this.state.isShimmer}
         />
+        <Toggle label="Enable automatic slideshow" onText="On" offText="Off" 
+          onChange={this.handleIsSlideshow}
+          defaultChecked={this.state.isSlideshow}
+        />
+        <Toggle label="Hide arrows on the last and on the first page" onText="On" offText="Off" 
+          onChange={this.handleHideArrowOnLastAndFirstPage}
+          defaultChecked={this.state.hideArrowOnLastAndFirstPage}
+        />
+        <Toggle label="Enable carousel (infinity slider). With this option you can scroll only by 1 item" onText="On" offText="Off" 
+          onChange={this.handleIsCarousel}
+          defaultChecked={this.state.isCarousel}
+        />
+        <Toggle label="Show half left item and half right item. Enable this feature only with isCarousel=true" onText="On" offText="Off" 
+          onChange={this.handleShowHalfItems}
+          defaultChecked={this.state.showHalfItems}
+        />
+        <Toggle label="Arrows inside" onText="On" offText="Off" 
+          onChange={this.handleArrowsInside}
+          defaultChecked={this.state.arrowsInside}
+        />
         <div className="emptyHeight"></div>
         
         <Slider
+          arrowsInside={this.state.arrowsInside}
+          automaticSlideshowDelay={this.state.isSlideshow ? 1000 : undefined}
+          hideArrowOnLastAndFirstPage={this.state.hideArrowOnLastAndFirstPage}
+          isCarousel={this.state.isCarousel}
           isShimmer={this.state.isShimmer}
           itemWidth={this.itemWidth + this.itemPadding * 2}
           items={this.getItems()}
@@ -149,6 +187,7 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
           paginationType={this.state.paginationType}
           scrollBy={this.state.scrollBy}
           showCount={this.state.showCount}
+          showHalfItems={this.state.showHalfItems}
           transitionDuration={this.state.transitionDuration}
         />
       </div>
@@ -182,9 +221,42 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
     return result;
   }
 
+  private handleArrowsInside = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
+    this.setState({
+      arrowsInside: checked ? checked : false
+    });
+  }
+
+  private handleHideArrowOnLastAndFirstPage = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
+    this.setState({
+      hideArrowOnLastAndFirstPage: checked ? checked : false
+    });
+  }
+
+  private handleIsCarousel = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
+    this.setState({
+      isCarousel: checked ? checked : false
+    });
+  }
+
   private handleIsShimmer = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
     this.setState({
       isShimmer: checked ? checked : false
+    });
+  }
+
+  private handleIsSlideshow = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
+    this.setState({
+      isSlideshow: checked ? checked : false
+    });
+  }
+
+  private handleShowHalfItems = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
+    const show = checked ? checked : false;
+    
+    this.setState({
+      showHalfItems: show,
+      isCarousel: show === true ? true : this.state.isCarousel
     });
   }
 
@@ -207,9 +279,13 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
 | Property Name | Required | Type | Comments |
 |-|-|-|-|
  | arrowFontSize | `Optional` |  *number* |     Pagination arrow font size in pixels       |  
+ | arrowsInside | `Optional` |  *boolean* |     Move arrows inside the slider. Work only with paginationType=SliderPaginationType.Arrows and SliderPaginationType.TopArrowsAndDots       |  
+ | automaticSlideshowDelay | `Optional` |  *number* |     Enable automatic slideshow. Add your delay in milliseconds       |  
  | className | `Optional` |  *string* |     Add custom class to component       |  
  | defaultPageIndex | `Optional` |  *number* |     Set default page integer index       |  
  | dotFontSize | `Optional` |  *number* |     Pagination dot font size in pixels if paginationType is SliderPaginationType.ArrowsAndDots       |  
+ | hideArrowOnLastAndFirstPage | `Optional` |  *boolean* |     Activate this option if you want to hide left arrow on the first page and right arrow on the last page       |  
+ | isCarousel | `Optional` |  *boolean* |     Enable carousel (infinity slider). With this prop slider will be scrolling only by ONE item       |  
  | isShimmer | `Optional` |  *boolean* |     Enable shimmer mode. This prop react only for pagination.       |  
  | itemWidth |  |  *number* |     An item width including paddings and margins       |  
  | items |  |  *Element[]* |     All slider's elements       |  
@@ -218,5 +294,6 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
  | paginationType | `Optional` |  *SliderPaginationType* |     Select pagination type.      **`default`** SliderPaginationType.Dots      |  
  | scrollBy |  |  *number* |     Integer number of items for scrolling       |  
  | showCount |  |  *number* |     Integer number of items to display       |  
+ | showHalfItems | `Optional` |  *boolean* |     Show half left item and half right item. Enable this feature only with isCarousel=true       |  
  | style | `Optional` |  *CSSProperties* |     Add custom standard styles to component       |  
  | transitionDuration | `Optional` |  *number* |     Animation transition duration in seconds       |

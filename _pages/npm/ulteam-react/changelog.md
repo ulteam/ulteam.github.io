@@ -5,6 +5,14 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.39.0
+- feat: add own classes for dots and arrows
+- feat: add new SliderPaginationType = TopArrowsAndDots
+- feat: add automatic slideshow to Slider component
+- feat: add to Slider and PaginationDots components new property: 'hideArrowOnLastAndFirstPage'
+- feat: add prop isCarousel to Slider component for enable carousel (infinity slider)
+- feat: add arrowsInside prop for Slider component
+
 #### v2.38.3
 - fix: animation error in BlogTile because of 'div' to 'a' replacement
 
