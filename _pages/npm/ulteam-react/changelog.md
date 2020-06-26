@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.40.0
+- feat: add own class for showing items in Slider component
+
 #### v2.39.1
 - fix: not updated dots is Slider with ArrowsAndDots pagination type
 
