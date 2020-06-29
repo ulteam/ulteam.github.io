@@ -184,10 +184,13 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
           items={this.getItems()}
           arrowFontSize={this.state.arrowFontSize}
           dotFontSize={this.state.dotFontSize}
+          onTransitionEnded={(currentPage: number) => { console.log(`End transition to ${currentPage} page`)}}
+          onTransitionStarted={(currentPage: number) => { console.log(`Start transition to ${currentPage} page`)}}
           paginationType={this.state.paginationType}
           scrollBy={this.state.scrollBy}
           showCount={this.state.showCount}
           showHalfItems={this.state.showHalfItems}
+          transitionClass="my-transition-class"
           transitionDuration={this.state.transitionDuration}
         />
       </div>
@@ -289,6 +292,8 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
  | isShimmer | `Optional` |  *boolean* |     Enable shimmer mode. This prop react only for pagination.       |  
  | itemWidth |  |  *number* |     An item width including paddings and margins       |  
  | items |  |  *Element[]* |     All slider's elements       |  
+ | onTransitionEnded | `Optional` |  *function* |     Add event handler on transition end. For firing you should set 'transitionClass' prop       |  
+ | onTransitionStarted | `Optional` |  *function* |     Add event handler on transition start. For firing you should set 'transitionClass' prop       |  
  | paginationClassName | `Optional` |  *string* |     Add your own class to pagination controls       |  
  | paginationStyle | `Optional` |  *CSSProperties* |     Add your own style to pagination controls       |  
  | paginationType | `Optional` |  *SliderPaginationType* |     Select pagination type.      **`default`** SliderPaginationType.Dots      |  
@@ -296,4 +301,5 @@ export class TestSlider extends React.Component<{}, ITestSliderState> {
  | showCount |  |  *number* |     Integer number of items to display       |  
  | showHalfItems | `Optional` |  *boolean* |     Show half left item and half right item. Enable this feature only with isCarousel=true       |  
  | style | `Optional` |  *CSSProperties* |     Add custom standard styles to component       |  
+ | transitionClass | `Optional` |  *string* |     Add your class while slider will be transitioned       |  
  | transitionDuration | `Optional` |  *number* |     Animation transition duration in seconds       |

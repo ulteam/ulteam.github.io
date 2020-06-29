@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.41.0
+- feat: add Slider props: transitionClass, onTransitionStarted, onTransitionEnded
+
 #### v2.40.0
 - feat: add own class for showing items in Slider component
 
