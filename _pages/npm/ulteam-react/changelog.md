@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v2.41.1
+- fix: Slider work in carousel mode with items count < showCount
+
 #### v2.41.0
 - feat: add Slider props: transitionClass, onTransitionStarted, onTransitionEnded
 
