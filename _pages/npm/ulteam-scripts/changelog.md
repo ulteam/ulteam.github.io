@@ -5,6 +5,9 @@ permalink: /npm/ulteam-scripts/changelog/
 
 ### changelog
 
+#### v1.9.1
+- fix: '$' symbol in control id for UForm.setItemValue method
+
 #### v1.9.0
 - feat: add ULogger class
 
