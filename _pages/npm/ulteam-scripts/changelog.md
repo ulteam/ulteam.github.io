@@ -5,6 +5,30 @@ permalink: /npm/ulteam-scripts/changelog/
 
 ### changelog
 
+#### v1.8.1
+- fix: add fieldname attribute for tr tag in UForm class
+
+#### v1.8.0
+- feat: add UForm.hideTimeInDatePicker method
+
+#### v1.7.1
+- fix: delete required star with UForm.setRequiredStar method
+
+#### v1.7.0
+- feat: add UForm.setTextFieldAsMultiChoice method
+
+#### v1.6.2
+- fix: add *.scss files for sp folder
+
+#### v1.6.1
+- fix: set methods setDisplayUserMulti, setTextField in UOverride class as static methods
+
+#### v1.6.0
+- feat: add new classes for working with standard SharePoint list forms: UOverride, UForm
+
+#### v1.5.1
+- fix: error in WebResponse.get() method if response data json has 'd' prop with value as plain text 
+
 #### v1.5.0
 - feat: add Delay class
 
