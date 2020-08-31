@@ -33,4 +33,5 @@ npm install --save ulteam-scripts@latest
 | [Delay](/npm/ulteam-scripts/delay/) | Create your async delay. |
 | [FetchHelper](/npm/ulteam-scripts/fetchhelper/) | Send HTTP requests by fetch API. |
 | [UForm](/npm/ulteam-scripts/uform/) | Helper methods for working with standard SharePoint list forms.<br> For correct working you shoud override standard CSR template using UOverride.init method. |
+| [ULogger](/npm/ulteam-scripts/ulogger/) | Log message or error to DOM and browser console. |
 | [UOverride](/npm/ulteam-scripts/uoverride/) | Override SharePoint form CSR template. |

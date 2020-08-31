@@ -5,6 +5,9 @@ permalink: /npm/ulteam-scripts/changelog/
 
 ### changelog
 
+#### v1.9.0
+- feat: add ULogger class
+
 #### v1.8.1
 - fix: add fieldname attribute for tr tag in UForm class
 
