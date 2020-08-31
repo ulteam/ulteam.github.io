@@ -16,14 +16,16 @@ npm:
         url: /npm/ulteam-scripts/about/
       - title: "- AzureLogger"
         url: /npm/ulteam-scripts/azurelogger/
+      - title: "- DateOperations"
+        url: /npm/ulteam-scripts/dateoperations/
       - title: "- Delay"
         url: /npm/ulteam-scripts/delay/
       - title: "- FetchHelper"
         url: /npm/ulteam-scripts/fetchhelper/
-      - title: "- WebResponse"
-        url: /npm/ulteam-scripts/webresponse/
-      - title: "samples"
-        url: /npm/ulteam-scripts/samples/
+      - title: "- UForm"
+        url: /npm/ulteam-scripts/uform/
+      - title: "- UOverride"
+        url: /npm/ulteam-scripts/uoverride/
       - title: "changelog"
         url: /npm/ulteam-scripts/changelog/
   - title: ulteam-react
