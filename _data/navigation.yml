@@ -24,6 +24,8 @@ npm:
         url: /npm/ulteam-scripts/fetchhelper/
       - title: "- UForm"
         url: /npm/ulteam-scripts/uform/
+      - title: "- ULogger"
+        url: /npm/ulteam-scripts/ulogger/
       - title: "- UOverride"
         url: /npm/ulteam-scripts/uoverride/
       - title: "changelog"
