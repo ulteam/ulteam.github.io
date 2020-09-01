@@ -5,6 +5,9 @@ permalink: /npm/ulteam-scripts/changelog/
 
 ### changelog
 
+#### v1.9.3
+- fix: registerGetValueCallback selector with '$' symbol in UOverride.setTextField method
+
 #### v1.9.2
 - fix: '$' symbol in control id for UForm.setItemValue method
 
