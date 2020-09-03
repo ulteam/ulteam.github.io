@@ -57,5 +57,5 @@ export class TestErrorHandler extends React.Component<{}, {}> {
 | Property Name | Required | Type | Comments |
 |-|-|-|-|
  | azureLogger | `Optional` |  *AzureLogger* |     It's used for adding exception to Azure Application Insights.       |  
- | messageBarProps | `Optional` |  *IMessageBarProps* |     Define your own props for Office UI MessageBar component       |  
+ | messageBarProps | `Optional` |  *IUMessageBarProps* |     Define your own props for Office UI MessageBar component       |  
  | onError | `Optional` |  *function* |     Handle your errors.       |

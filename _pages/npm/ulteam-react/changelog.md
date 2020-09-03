@@ -5,6 +5,17 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v3.0.0
+- BREAKING CHANGE: update office-ui-fabric-react package to 7 major version
+- fix: change IMessageBarProps on IUMessageBarProps for ErrorHandler component props
+- fix: change ITag to IAutoCompleteTag interface for AutoComplete component props
+- fix: change IPersonaProps to IUPersonaProps interface for UlPeoplePicker component props
+- fix: change IBasePickerSuggestionsProps to IUBasePickerSuggestionsProps interface for UlPeoplePicker component props
+- fix: change IContextualMenuItem to IUContextualMenuItem interface for IHeaderFieldProps interface
+- fix: show correct value for FormFields.BooleanField in view mode of FormApp component
+- fix: hide standard label for DatePicker if in FormApp config this field has labelOnTheLeft=true prop
+- fix: move checkbox label from right to left if this field in FormApp config has labelOnTheLeft=true prop
+
 #### v2.41.1
 - fix: Slider work in carousel mode with items count < showCount
 
