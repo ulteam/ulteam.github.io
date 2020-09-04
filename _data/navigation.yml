@@ -74,6 +74,8 @@ npm:
         url: /npm/ulteam-grid/gridwebpart/
       - title: "samples"
         url: /npm/ulteam-grid/samples/
+      - title: "demo"
+        url: /npm/ulteam-grid/demo/
       - title: "changelog"
         url: /npm/ulteam-grid/changelog/
   - title: generator-ulteam-sp
