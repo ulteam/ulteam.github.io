@@ -239,7 +239,9 @@ export class TestFormPage extends React.Component<{}, ITestFormPageState> {
             validationErrorOnChange: this.numberValidation
           },
           {
-            // value: defaultValues.numberField
+            useCommaDelimiter: true,
+            autoValidation: true,
+            round: 2
           }),
           FormFields.NumberField('doubleNumberField', {
             label: 'Double number',

@@ -5,6 +5,15 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v3.1.0
+add from v2.42.0
+- feat: add useCommaDelimiter to INumberFieldProps for FormApp component
+
+add from v2.43.0
+- feat: add useCommaDelimiter prop to NumberField component
+- fix: not typed the last decimal place
+- docs: add NumberField component on react-demo page
+
 #### v3.0.0
 - BREAKING CHANGE: update office-ui-fabric-react package to 7 major version
 - fix: change IMessageBarProps on IUMessageBarProps for ErrorHandler component props
@@ -15,6 +24,14 @@ permalink: /npm/ulteam-react/changelog/
 - fix: show correct value for FormFields.BooleanField in view mode of FormApp component
 - fix: hide standard label for DatePicker if in FormApp config this field has labelOnTheLeft=true prop
 - fix: move checkbox label from right to left if this field in FormApp config has labelOnTheLeft=true prop
+
+#### v2.43.0
+- feat: add useCommaDelimiter to INumberFieldProps for FormApp component
+
+#### v2.42.0
+- feat: add useCommaDelimiter prop to NumberField component
+- fix: not typed the last decimal place
+- docs: add NumberField component on react-demo page
 
 #### v2.41.1
 - fix: Slider work in carousel mode with items count < showCount
