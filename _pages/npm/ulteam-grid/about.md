@@ -13,17 +13,21 @@ Managing web parts working on [@pnp/sp](https://pnp.github.io/pnpjs/sp/) by defa
 If you want to use your own API, just add noRestApi & onAction props to your UlteamGrid component.
 Components based on [Office UI Fabric React](https://www.npmjs.com/package/office-ui-fabric-react) library.
 
+#### Demo
+Try components on the [demo](/npm/ulteam-grid/demo/)
+
 #### Components
 
 | Name | Description |
 |-|-|
-| [UlteamGrid](/npm/ulteam-grid/ulteamgrid/) | There is a bootstrap of grid web part page. |
-| [GridWebPart](/npm/ulteam-grid/gridwebpart/) | There is a bootstrap of grid web part page. |
+| [GridWebPart](/npm/ulteam-grid/gridwebpart/) | Web part for UlteamGrid component. Component handle web part properties, add wrap for page on edit mode (edit, delete icons, property panel for change properties). |
 
 #### Getting Started
 
+- Create configuration lists via PnP Provisioning
+  - Open "{your-workspace-folder}/node_modules/ulteam-grid/provisioning/" folder
+  - Go to the script "provisioning.ps1" for the details 
 - Create your grid page with UlteamGrid component.
-
 - Create your web part using [generator-ulteam-sp](https://www.npmjs.com/package/generator-ulteam-sp) Grid web part template.
 
 #### Property Panel
