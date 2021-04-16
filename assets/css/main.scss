@@ -78,6 +78,11 @@ table {
   }
 }
 
+// fix for ulteam-grid demo page
+.GridWebPart * {
+  box-sizing: initial;
+}
+
 /*
    Solarized Light
    http://ethanschoonover.com/solarized
