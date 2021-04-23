@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v3.1.1
+- fix: selection issue in IE 11. Detected in FormApp component for NumberField
+
 #### v3.1.0
 add from v2.42.0
 - feat: add useCommaDelimiter to INumberFieldProps for FormApp component
