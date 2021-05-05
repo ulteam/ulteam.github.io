@@ -5,6 +5,10 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v3.2.0
+- feat: add fieldValue parameter to handleCellClick prop in UlTable component
+- feat: add fieldValue parameter to handleFieldOnClick prop in FormApp component
+
 #### v3.1.1
 - fix: selection issue in IE 11. Detected in FormApp component for NumberField
 

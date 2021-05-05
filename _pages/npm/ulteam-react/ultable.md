@@ -92,6 +92,7 @@ export class TestTablePage extends React.Component<{}, ITestTablePageState> {
             key={this.tableKey}
             checkRequired={true}
             customClass="customTableClass"
+            handleCellClick={this.handleCellClick}
             handleChangeValues={this.handleChangeFieldValues}
             onComponentMount={this.onComponentMount}
             onChangeSelection={this.onChangeSelection}
@@ -228,6 +229,10 @@ export class TestTablePage extends React.Component<{}, ITestTablePageState> {
         multilineRows: 1
       })
     ];
+  }
+
+  private handleCellClick = (fieldId: string, fieldConfig: IFormField<any>, formId?: number, fieldValue?: any) => {
+    console.log('handleCellClick', fieldConfig, fieldValue);
   }
 
   private handleChangeFieldValues = (rows: IUlTableRow<ITestTableRowFields>[]) => {
