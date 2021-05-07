@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v3.3.0
+- feat: add handleRowClass to UlTable component
+
 #### v3.2.0
 - feat: add fieldValue parameter to handleCellClick prop in UlTable component
 - feat: add fieldValue parameter to handleFieldOnClick prop in FormApp component

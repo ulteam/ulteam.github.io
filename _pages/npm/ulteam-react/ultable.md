@@ -61,8 +61,6 @@ export class TestTablePage extends React.Component<{}, ITestTablePageState> {
   }
 
   public render() {
-    console.log('TestTablePage');
-
     const selectionModeOptions: IDropdownOption[] = [
       {
         key: 'None',
@@ -84,7 +82,7 @@ export class TestTablePage extends React.Component<{}, ITestTablePageState> {
           label="Table selection mode"
           options={selectionModeOptions} 
           onChange={this.handleSelectionModeChange}
-          defaultValue={UlTableSelectionMode.Multiple}
+          defaultValue="None"
           style={ { width: 200 } }
         />
         <div className="form">
@@ -94,6 +92,7 @@ export class TestTablePage extends React.Component<{}, ITestTablePageState> {
             customClass="customTableClass"
             handleCellClick={this.handleCellClick}
             handleChangeValues={this.handleChangeFieldValues}
+            handleRowClass={this.handleRowClass}
             onComponentMount={this.onComponentMount}
             onChangeSelection={this.onChangeSelection}
             readViewNoFocus={true}
@@ -239,6 +238,10 @@ export class TestTablePage extends React.Component<{}, ITestTablePageState> {
     console.log(rows);
   }
 
+  private handleRowClass = (fieldValues: any, rowId: number, rowIndex: number, isTotalRow?: boolean | undefined): string => {
+    return rowIndex % 2 === 0 ? 'handleRowClass' : '';
+  } 
+
   private onComponentMount = (rows: IUlTableRow<ITestTableRowFields>[]) => {
     console.log('onComponentMount', rows);
   }
@@ -264,7 +267,8 @@ export class TestTablePage extends React.Component<{}, ITestTablePageState> {
  | fields |  |  *Array‹[IFormField](interfaces/iformfield.md)‹any››* |     Row fields configuration       |  
  | fixHeight | `Optional` |  *number* |     Table row       |  
  | handleCellClick | `Optional` |  *function* |     Click event on any cell in table       |  
- | handleChangeValues |  |  *function* |  |  
+ | handleChangeValues |  |  *function* |     Fires if any field (cell) value has changed       |  
+ | handleRowClass | `Optional` |  *function* |     Add your class to row related on row data       |  
  | handleTotalRow | `Optional` |  *function* |     If you want to add total row in table, you should set property addTotalRow = true Set values for total row. WARN: it is working only for text and number field types       |  
  | hideHeader | `Optional` |  *boolean* |     Hide table header or not       |  
  | isShimmer | `Optional` |  *boolean* |     Show Office UI Shimmer component instead of field       |  
