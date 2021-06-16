@@ -28,6 +28,8 @@ npm:
         url: /npm/ulteam-scripts/ulogger/
       - title: "- UOverride"
         url: /npm/ulteam-scripts/uoverride/
+      - title: "- WebResponse"
+        url: /npm/ulteam-scripts/webresponse/
       - title: "changelog"
         url: /npm/ulteam-scripts/changelog/
   - title: ulteam-react
