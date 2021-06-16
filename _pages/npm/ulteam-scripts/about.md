@@ -35,3 +35,4 @@ npm install --save ulteam-scripts@latest
 | [UForm](/npm/ulteam-scripts/uform/) | Helper methods for working with standard SharePoint list forms.<br> For correct working you shoud override standard CSR template using UOverride.init method. |
 | [ULogger](/npm/ulteam-scripts/ulogger/) | Log message or error to DOM and browser console. |
 | [UOverride](/npm/ulteam-scripts/uoverride/) | Override SharePoint form CSR template. |
+| [WebResponse](/npm/ulteam-scripts/webresponse/) | Work with the Response object of the fetch API. |

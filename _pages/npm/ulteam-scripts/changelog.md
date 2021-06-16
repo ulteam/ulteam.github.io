@@ -5,6 +5,8 @@ permalink: /npm/ulteam-scripts/changelog/
 
 ### changelog
 
+#### v1.9.4
+- docs: add page for the WebResponse class in the ulteam.github.io site
 #### v1.9.3
 - fix: registerGetValueCallback selector with '$' symbol in UOverride.setTextField method
 
