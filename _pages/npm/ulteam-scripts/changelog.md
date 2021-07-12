@@ -5,6 +5,10 @@ permalink: /npm/ulteam-scripts/changelog/
 
 ### changelog
 
+#### v1.9.6
+- fix: empty 'data' property in the WebResponse.get method
+- fix: add console.error logging when JSON.parse returned error in the WebResponse.get method
+
 #### v1.9.5
 - fix: error in WebResponse.get method where a 'fetch response' is an empty
 
