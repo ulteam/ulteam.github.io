@@ -5,6 +5,24 @@ permalink: /npm/generator-ulteam-sp/changelog/
 
 ### Changelog
 
+#### v1.9.0
+- feat: add ESLint to templates
+- fix: resolve lint warns & errors in the template App.tsx file
+
+#### v1.8.0
+- feat: update ulteam-grid package to latest version
+
+#### v1.7.1
+- fix: add webServerRelativeUrl to AppData class for 'React empty' tempalte
+
+#### v1.7.0
+- feat: add webServerRelativeUrl to AppData class
+- refactor: rename 'absoluteWebUrl' to SharePoint's identical 'webAbsoluteUrl'
+- fix: absoluteWebUrl = _spPageContextInfo.webAbsoluteUrl
+
+#### v1.6.3
+- fix: add polyfil for 'Set' function
+
 #### v1.6.2
 - fix: add source map from node_modules to development bundle
 
