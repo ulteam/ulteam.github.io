@@ -5,6 +5,9 @@ permalink: /npm/generator-ulteam-sp/changelog/
 
 ### Changelog
 
+#### v1.10.0
+- feat: add webpack-bundle-analyzer
+
 #### v1.9.0
 - feat: add ESLint to templates
 - fix: resolve lint warns & errors in the template App.tsx file
