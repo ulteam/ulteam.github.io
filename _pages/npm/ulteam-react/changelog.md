@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v3.4.0
+- feat: update react to v17
+
 #### v3.3.0
 - feat: add handleRowClass to UlTable component
 
