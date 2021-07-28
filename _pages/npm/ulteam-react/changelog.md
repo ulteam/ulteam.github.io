@@ -5,6 +5,10 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v3.5.0
+- feat: add ErrorHandlerLight component without office-ui-fabric-react package
+- feat: base ErrorHandler on the ErrorHandlerLight component
+
 #### v3.4.0
 - feat: update react to v17
 
