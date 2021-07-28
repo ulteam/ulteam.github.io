@@ -44,6 +44,8 @@ npm:
         url: /npm/ulteam-react/blogtileboard/
       - title: "- ErrorHandler"
         url: /npm/ulteam-react/errorhandler/
+      - title: "- ErrorHandlerLight"
+        url: /npm/ulteam-react/errorhandlerlight/
       - title: "- FilePicker"
         url: /npm/ulteam-react/filepicker/
       - title: "- FormApp"
