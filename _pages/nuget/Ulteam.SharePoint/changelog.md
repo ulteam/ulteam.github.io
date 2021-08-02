@@ -8,6 +8,9 @@ sidebar:
 ﻿
 ### changelog
 
+#### v1.9.0
+- feat: add Type parameter to Lists.CreateList and Lists.CreateOrUpdateList methods
+
 #### v1.8.0
 - feat: add 'rowLimit' parameter to the Lists.GetItemsByTextField method
 
