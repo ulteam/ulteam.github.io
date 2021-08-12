@@ -29,6 +29,7 @@ npm install --save ulteam-scripts@latest
 | Name | Description |
 |-|-|
 | [AzureLogger](/npm/ulteam-scripts/azurelogger/) | Work with Azure Application Insights |
+| [DateFormat](/npm/ulteam-scripts/dateformat/) | Light and simple date format. |
 | [DateOperations](/npm/ulteam-scripts/dateoperations/) | Basic operations with date type objects. |
 | [Delay](/npm/ulteam-scripts/delay/) | Create your async delay. |
 | [FetchHelper](/npm/ulteam-scripts/fetchhelper/) | Send HTTP requests by fetch API. |
