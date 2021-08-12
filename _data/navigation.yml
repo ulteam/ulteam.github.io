@@ -16,6 +16,8 @@ npm:
         url: /npm/ulteam-scripts/about/
       - title: "- AzureLogger"
         url: /npm/ulteam-scripts/azurelogger/
+      - title: "- DateFormat"
+        url: /npm/ulteam-scripts/dateformat/
       - title: "- DateOperations"
         url: /npm/ulteam-scripts/dateoperations/
       - title: "- Delay"
