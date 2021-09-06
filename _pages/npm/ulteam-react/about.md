@@ -38,8 +38,10 @@ npm install --save ulteam-react@latest
 | [FormApp](/npm/ulteam-react/formapp/) | Generate your form with controls from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.<br>Configure form fields and component aggregates all field values in one plain object. |
 | [GroupContent](/npm/ulteam-react/groupcontent/) | Component for expand and collapse content. Just wrap your JSX elements. |
 | [ImageTile](/npm/ulteam-react/imagetile/) | Tile with image and data. |
+| [MegaMenu](/npm/ulteam-react/megamenu/) | Mega Menu component. |
 | [NumberField](/npm/ulteam-react/numberfield/) | Component is based on TextField from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.<br>Properties extends TextField component props. |
 | [PaginationDots](/npm/ulteam-react/paginationdots/) | Pagination dots with or not arrows. |
+| [PivotMegaMenu](/npm/ulteam-react/pivotmegamenu/) | Pivot with Mega Menu on each item. |
 | [Slider](/npm/ulteam-react/slider/) | Horizontal slider with animation. |
 | [UlEvent](/npm/ulteam-react/ulevent/) | Event with calendar tile. |
 | [UlPeoplePicker](/npm/ulteam-react/ulpeoplepicker/) | People picker based on NormalPeoplePicker component from [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) package.<br>It's just more convenient NormalPeoplePicker component. |

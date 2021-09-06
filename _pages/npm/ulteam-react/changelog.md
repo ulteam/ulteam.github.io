@@ -5,6 +5,10 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v3.6.0
+- feat: add the MegaMenu component
+- feat: add the PivotMegaMenu component
+
 #### v3.5.0
 - feat: add ErrorHandlerLight component without office-ui-fabric-react package
 - feat: base ErrorHandler on the ErrorHandlerLight component
