@@ -5,6 +5,9 @@ permalink: /npm/ulteam-scripts/changelog/
 
 ### changelog
 
+#### v1.11.0
+- feat: add Helper class
+
 #### v1.10.0
 - feat: add DateFormat class
 
