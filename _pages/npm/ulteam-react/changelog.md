@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v3.6.1
+- fix: hide MegaMenu in the PivotMegaMenu when you click on the Pivot Item
+
 #### v3.6.0
 - feat: add the MegaMenu component
 - feat: add the PivotMegaMenu component
