@@ -44,6 +44,8 @@ npm:
         url: /npm/ulteam-react/blogtile/
       - title: "- BlogTileBoard"
         url: /npm/ulteam-react/blogtileboard/
+      - title: "- BurgerMenu"
+        url: /npm/ulteam-react/burgermenu/
       - title: "- ErrorHandler"
         url: /npm/ulteam-react/errorhandler/
       - title: "- ErrorHandlerLight"
@@ -56,12 +58,18 @@ npm:
         url: /npm/ulteam-react/groupcontent/
       - title: "- ImageTile"
         url: /npm/ulteam-react/imagetile/
+      - title: "- MegaMenu"
+        url: /npm/ulteam-react/megamenu/
       - title: "- NumberField"
         url: /npm/ulteam-react/numberfield/
       - title: "- PaginationDots"
         url: /npm/ulteam-react/paginationdots/
+      - title: "- PivotMegaMenu"
+        url: /npm/ulteam-react/pivotmegamenu/
       - title: "- Slider"
         url: /npm/ulteam-react/slider/
+      - title: "- UlEvent"
+        url: /npm/ulteam-react/ulevent/
       - title: "- UlPeoplePicker"
         url: /npm/ulteam-react/ulpeoplepicker/
       - title: "- UlTable"
