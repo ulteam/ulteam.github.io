@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v3.7.0
+- feat: add the BurgerMenu component
+
 #### v3.6.1
 - fix: hide MegaMenu in the PivotMegaMenu when you click on the Pivot Item
 
