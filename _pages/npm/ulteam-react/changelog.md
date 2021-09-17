@@ -5,6 +5,9 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v3.7.1
+- fix: add key to the BurgerMenu li tag
+
 #### v3.7.0
 - feat: add the BurgerMenu component
 
