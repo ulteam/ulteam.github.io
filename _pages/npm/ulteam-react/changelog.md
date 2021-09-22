@@ -5,6 +5,10 @@ permalink: /npm/ulteam-react/changelog/
 
 ### changelog
 
+#### v3.8.0
+- feat: add the onRenderStyle prop to the MegaMenu component
+- feat: add the onRenderStyle, fullWidth props to the PivotMegaMenu component
+
 #### v3.7.1
 - fix: add key to the BurgerMenu li tag
 

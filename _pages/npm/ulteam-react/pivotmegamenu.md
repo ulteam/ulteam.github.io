@@ -19,6 +19,7 @@ import { PivotMegaMenu } from '../../../../common/components/PivotMegaMenu/Pivot
 import { IPivotMegaMenuItem } from '../../../../common/components/PivotMegaMenu/PivotMegaMenu.types';
 
 interface ITestPivotMegaMenuState {
+  fullWidth: boolean;
   openOnHover: boolean;
 }
 
@@ -31,6 +32,7 @@ export class TestPivotMegaMenu extends React.Component<{}, ITestPivotMegaMenuSta
   constructor(props: {}) {
     super(props);
     this.state = {
+      fullWidth: false,
       openOnHover: false
     };
     this.items = Array(5).fill(1).map((pValue, pIndex) => {
@@ -53,11 +55,16 @@ export class TestPivotMegaMenu extends React.Component<{}, ITestPivotMegaMenuSta
   public render() {
     return (
       <div>
+        <Toggle label="Full Width" onText="On" offText="Off" 
+          onChange={this.handleFullWidth}
+          defaultChecked={this.state.fullWidth}
+        />
         <Toggle label="Open on hover" onText="On" offText="Off" 
           onChange={this.handleOpenOnHover}
           defaultChecked={this.state.openOnHover}
         />
         <PivotMegaMenu
+          fullWidth={this.state.fullWidth}
           items={this.items}
           openOnHover={this.state.openOnHover}
           uniqueKey="testPivotMegaMenu"
@@ -76,6 +83,12 @@ export class TestPivotMegaMenu extends React.Component<{}, ITestPivotMegaMenuSta
     ) 
   }
 
+  private handleFullWidth = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
+    this.setState({
+      fullWidth: checked === true
+    });
+  }
+
   private handleOpenOnHover = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {
     this.setState({
       openOnHover: checked === true
@@ -90,7 +103,9 @@ export class TestPivotMegaMenu extends React.Component<{}, ITestPivotMegaMenuSta
 | Property Name | Required | Type | Comments |
 |-|-|-|-|
  | className | `Optional` |  *string* |     Add custom class to component       |  
+ | fullWidth | `Optional` |  *boolean* |     Whether open mega menu on full width       |  
  | items |  |  *IPivotMegaMenuItem[]* |     Pivot items with children items for Mega Menu component       |  
+ | onRenderStyle | `Optional` |  *function* |     Set custom style for the Mega Menu container on the component render       |  
  | openOnHover | `Optional` |  *boolean* |     Whether open Mega Menu on hover or on click       |  
  | style | `Optional` |  *CSSProperties* |     Add custom standard styles to component       |  
  | uniqueKey |  |  *string* |     Unique for DOM identificator       |
