@@ -43,6 +43,7 @@ export class TestPivotMegaMenu extends React.Component<{}, ITestPivotMegaMenuSta
           return {
             key: index,
             label: `Menu Item ${pIndex}.${index}`,
+            linkUrl: `Menu Item Href ${pIndex}.${index}`,
             content: this.getMenuItemContent(`${pIndex}.${index}`)
           };
         })
@@ -51,15 +52,15 @@ export class TestPivotMegaMenu extends React.Component<{}, ITestPivotMegaMenuSta
       return item;
     });
   }
-  
+
   public render() {
     return (
       <div>
-        <Toggle label="Full Width" onText="On" offText="Off" 
+        <Toggle label="Full Width" onText="On" offText="Off"
           onChange={this.handleFullWidth}
           defaultChecked={this.state.fullWidth}
         />
-        <Toggle label="Open on hover" onText="On" offText="Off" 
+        <Toggle label="Open on hover" onText="On" offText="Off"
           onChange={this.handleOpenOnHover}
           defaultChecked={this.state.openOnHover}
         />
@@ -80,7 +81,7 @@ export class TestPivotMegaMenu extends React.Component<{}, ITestPivotMegaMenuSta
           return <li className="ul-megaMenu-item" key={`${key}.${index}`}>{`Sub menu item ${key}.${index}`}</li>
         })}
       </ul>
-    ) 
+    )
   }
 
   private handleFullWidth = (event: React.MouseEvent<HTMLElement, MouseEvent>, checked?: boolean | undefined) => {

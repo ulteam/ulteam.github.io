@@ -40,6 +40,7 @@ export class TestMegaMenu extends React.Component<{}, ITestMegaMenuState> {
       return {
         key: index,
         label: `Menu Item ${index}`,
+        linkUrl:`Menu Href ${index}`,
         content: this.getMenuItemContent(index)
       };
     });
